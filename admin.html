@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Devai Technologies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #003d82;
+        }
+
+        .quote {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .quote h3 {
+            margin-top: 0;
+        }
+
+        .quote p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Admin Panel - Customer Quotes</h1>
+    <div id="quotesContainer"></div>
+
+    <script>
+        async function loadQuotes() {
+            try {
+                const response = await fetch('/api/quotes');
+                const quotes = await response.json();
+                const container = document.getElementById('quotesContainer');
+
+                if (quotes.length === 0) {
+                    container.innerHTML = '<p>No quotes submitted yet.</p>';
+                    return;
+                }
+
+                container.innerHTML = quotes.map(quote => `
+                    <div class="quote">
+                        <h3>${quote.name}</h3>
+                        <p><strong>Phone:</strong> ${quote.phone}</p>
+                        <p><strong>Email:</strong> ${quote.email}</p>
+                        <p><strong>Product:</strong> ${quote.product}</p>
+                        <p><strong>Message:</strong> ${quote.message}</p>
+                        <p><strong>Submitted:</strong> ${new Date(quote.timestamp).toLocaleString()}</p>
+                    </div>
+                `).join('');
+            } catch (error) {
+                console.error('Error loading quotes:', error);
+                document.getElementById('quotesContainer').innerHTML = '<p>Error loading quotes.</p>';
+            }
+        }
+
+        // Load quotes on page load
+        loadQuotes();
+
+        // Refresh quotes every 30 seconds
+        setInterval(loadQuotes, 30000);
+    </script>
+</body>
+
+</html>
