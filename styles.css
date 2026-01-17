@@ -891,5 +891,15 @@ footer {
 
     .logo {
         animation-duration: 1s;
+        font-size: 1.5rem;
+        /* Smaller font for mobile to accommodate doubled text */
+        text-align: center;
+        word-break: break-word;
+        /* Allow breaking long text */
+    }
+
+    .nav-links {
+        width: 100%;
+        /* Ensure full width on mobile */
     }
 }
