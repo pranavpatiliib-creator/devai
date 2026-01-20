@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3>${name}</h3>
                     <div class="back-content">
                         <p class="full-desc">${descFull}</p>
-                        <a href="https://wa.me/919421493934?text=${encodeURIComponent('Hi, I am interested in: ' + name + '. Please provide more details.')}" target="_blank" class="enquire-btn">Enquire Now</a>
+                        <a href="https://wa.me/919421493934?text=${encodeURIComponent('Hi, I am interested in: ' + name + '. Please provide more details.')}" target="_blank" rel="noopener noreferrer" class="enquire-btn">Enquire Now</a>
                     </div>
                 </div>
             </div>
