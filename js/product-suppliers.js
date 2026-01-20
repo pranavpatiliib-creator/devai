@@ -1,15 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
     const gridContainer = document.getElementById('manufacturers-grid');
 
-    if (!gridContainer) return;
-
-    // Check if data is available
-    if (typeof manufacturersData === 'undefined' || !manufacturersData || manufacturersData.length === 0) {
-        gridContainer.innerHTML = '<p class="no-data">No manufacturer data available. Please run the fetch script.</p>';
+    if (!gridContainer) {
+        console.error('Grid container not found!');
         return;
     }
 
-    manufacturersData.forEach(mfg => {
+    // Remove loading spinner
+    gridContainer.innerHTML = '';
+
+    // Check if data is available
+    if (typeof productSuppliersData === 'undefined' || !productSuppliersData || productSuppliersData.length === 0) {
+        gridContainer.innerHTML = '<p class="no-data">No product supplier data available. Please check the data file.</p>';
+        return;
+    }
+
+    console.log('Loading', productSuppliersData.length, 'suppliers');
+
+    productSuppliersData.forEach(supplier => {
         // Create card element
         const card = document.createElement('div');
         card.className = 'flip-card';
@@ -19,10 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
             this.classList.toggle('hovered');
         });
 
-        const name = mfg.name || 'Unknown';
-        const image = mfg.image || 'images/placeholder.png';
-        const description = mfg.description || 'Information unavailable';
-        const country = mfg.country ? `<span>🌍 ${mfg.country}</span>` : '';
+        const name = supplier.name || 'Unknown';
+        const image = supplier.image || 'images/placeholder.png';
+        const description = supplier.description || 'Information unavailable';
+        const country = supplier.country ? `<span>🌍 ${supplier.country}</span>` : '';
 
         card.innerHTML = `
             <div class="flip-card-inner">

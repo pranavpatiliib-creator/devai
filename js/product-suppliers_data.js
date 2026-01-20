@@ -1,4 +1,4 @@
-const manufacturersData = [
+const productSuppliersData = [
     {
         "name": "ABB",
         "image": "images/manufacturers/ABB.png",
