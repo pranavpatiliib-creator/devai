@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
+    // Clear loading spinner before rendering products
+    gridContainer.innerHTML = '';
+
     productsData.forEach(product => {
         // Create card wrapper
         const card = document.createElement('div');
