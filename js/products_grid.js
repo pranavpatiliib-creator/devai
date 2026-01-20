@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="product-info-front">
                         <h3>${name}</h3>
-                        ${mfg ? `<p class="manufacturer">${mfg}</p>` : ''}
+                        ${mfg ? `<p class="product-supplier">${mfg}</p>` : ''}
                         <p class="short-desc">${descShort}</p>
                     </div>
                     <div class="flip-hint">Click to details ↻</div>
@@ -74,11 +74,11 @@ function initializeSearch() {
 
         productCards.forEach(card => {
             const productName = card.querySelector('h3').textContent.toLowerCase();
-            const manufacturer = card.querySelector('.manufacturer') ? card.querySelector('.manufacturer').textContent.toLowerCase() : '';
+            const productSupplier = card.querySelector('.product-supplier') ? card.querySelector('.product-supplier').textContent.toLowerCase() : '';
             const category = card.querySelector('.category-tag').textContent.toLowerCase();
 
             const matches = productName.includes(searchTerm) ||
-                manufacturer.includes(searchTerm) ||
+                productSupplier.includes(searchTerm) ||
                 category.includes(searchTerm);
 
             card.style.display = matches || searchTerm === '' ? '' : 'none';
