@@ -54,3 +54,4 @@ assets/large-images/
 # =========================
 .cache/
 .tmp/
+*.zip
