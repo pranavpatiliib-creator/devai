@@ -1,240 +1,257 @@
 /* Products Grid Layout and Styling */
 
-/* Grid Container */
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    /* Mobile: 1 column */
-    gap: 2rem;
-    padding: 2rem 0;
-    width: 100%;
+/* ========================
+   Product Hero Section
+   ======================== */
+.products-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/products/lt_control_panel.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0 60px;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 2rem;
 }
 
-/* Tablet Breakpoint */
-@media (min-width: 768px) {
-    .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* Tablet: 2 columns */
-    }
+.products-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ffd700;
 }
 
-/* Desktop Breakpoint */
-@media (min-width: 1024px) {
-    /* ========================
+.products-hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ========================
    Product Flip Card Styles
    ======================== */
 
-    .products-hero {
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/products/lt_control_panel.png');
-        background-size: cover;
-        background-position: center;
-        color: white;
-        padding: 100px 0 60px;
-        text-align: center;
-        margin-top: 60px;
-        /* Space for fixed header */
-        margin-bottom: 2rem;
-    }
+/* Grid Container */
+#products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 3rem;
+    padding: 2rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
+/* Flip Card Container */
+.product-flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 400px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.product-flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+/* Flip Interaction */
+.product-flip-card:hover .product-flip-card-inner,
+.product-flip-card.flipped .product-flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front & Back Common */
+.product-flip-card-front,
+.product-flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+}
+
+/* Front Side */
+.product-flip-card-front {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+}
+
+.category-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #003d82;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.image-wrapper {
+    height: 220px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.product-flip-card:hover .image-wrapper img {
+    transform: scale(1.1);
+}
+
+.product-info-front {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-info-front h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.product-info-front .manufacturer {
+    color: #003d82;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-info-front .short-desc {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.flip-hint {
+    font-size: 0.8rem;
+    color: #999;
+    padding-bottom: 1rem;
+    opacity: 0.7;
+}
+
+/* Back Side */
+.product-flip-card-back {
+    background: linear-gradient(135deg, #003d82 0%, #001f42 100%);
+    color: white;
+    transform: rotateY(180deg);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-flip-card-back h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: #ffd700;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 0.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.back-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.full-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.enquire-btn {
+    background: #ffd700;
+    color: #003d82;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.enquire-btn:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================
+   Responsive Design
+   ======================== */
+
+/* Mobile */
+@media (max-width: 767px) {
     .products-hero h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-        color: #ffd700;
+        font-size: 2rem;
     }
 
     .products-hero p {
-        font-size: 1.2rem;
-        max-width: 800px;
-        margin: 0 auto;
-    }
-
-    /* Grid Container */
-    #products-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 3rem;
-        padding: 2rem 5%;
-        max-width: 1400px;
-        margin: 0 auto;
-    }
-
-    /* Flip Card Container */
-    .product-flip-card {
-        background-color: transparent;
-        width: 100%;
-        height: 400px;
-        /* Taller for product info */
-        perspective: 1000px;
-        cursor: pointer;
-    }
-
-    .product-flip-card-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        /* Bouncy transition */
-        transform-style: preserve-3d;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        border-radius: 15px;
-    }
-
-    /* Flip Interaction */
-    .product-flip-card:hover .product-flip-card-inner,
-    .product-flip-card.flipped .product-flip-card-inner {
-        transform: rotateY(180deg);
-    }
-
-    /* Front & Back Common */
-    .product-flip-card-front,
-    .product-flip-card-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        border-radius: 15px;
-        overflow: hidden;
-        background: white;
-    }
-
-    /* Front Side */
-    .product-flip-card-front {
-        display: flex;
-        flex-direction: column;
-        border: 1px solid #eee;
-    }
-
-    .category-tag {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        background: #003d82;
-        color: white;
-        padding: 4px 12px;
-        border-radius: 20px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        z-index: 2;
-    }
-
-    .image-wrapper {
-        height: 220px;
-        padding: 1.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #f8f9fa;
-    }
-
-    .image-wrapper img {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-        transition: transform 0.3s;
-    }
-
-    .product-flip-card:hover .image-wrapper img {
-        transform: scale(1.1);
-    }
-
-    .product-info-front {
-        padding: 1.5rem;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .product-info-front h3 {
-        font-size: 1.2rem;
-        color: #333;
-        margin-bottom: 0.5rem;
-        line-height: 1.3;
-    }
-
-    .product-info-front .manufacturer {
-        color: #003d82;
-        font-weight: 700;
-        font-size: 0.9rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .product-info-front .short-desc {
-        font-size: 0.9rem;
-        color: #666;
-        line-height: 1.4;
-    }
-
-    .flip-hint {
-        font-size: 0.8rem;
-        color: #999;
-        padding-bottom: 1rem;
-        opacity: 0.7;
-    }
-
-    /* Back Side */
-    .product-flip-card-back {
-        background: linear-gradient(135deg, #003d82 0%, #001f42 100%);
-        color: white;
-        transform: rotateY(180deg);
-        padding: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .product-flip-card-back h3 {
-        font-size: 1.4rem;
-        margin-bottom: 1.5rem;
-        color: #ffd700;
-        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-        padding-bottom: 0.5rem;
-        width: 100%;
-        text-align: center;
-    }
-
-    .back-content {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .full-desc {
         font-size: 1rem;
-        line-height: 1.6;
-        color: #e0e0e0;
-        margin-bottom: 2rem;
-        text-align: center;
+        padding: 0 1rem;
     }
 
-    .enquire-btn {
-        background: #ffd700;
-        color: #003d82;
-        text-decoration: none;
-        padding: 12px 25px;
-        border-radius: 25px;
-        font-weight: bold;
-        transition: all 0.3s;
-        text-transform: uppercase;
-        font-size: 0.9rem;
+    #products-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1rem;
     }
 
-    .enquire-btn:hover {
-        background: white;
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    .product-flip-card {
+        height: 380px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-        #products-grid {
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-        }
+    .product-flip-card {
+        height: 390px;
     }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    #products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
