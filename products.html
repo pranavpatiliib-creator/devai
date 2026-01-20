@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Our full range of industrial electrical products and services.">
+    <title>Our Products - Devai Technologies</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/owner.css">
+    <!-- Reusing existing styles where applicable -->
+</head>
+
+<body>
+    <!-- Main container for dynamic components -->
+    <div id="header"></div>
+
+    <div class="products-hero">
+        <div class="container">
+            <h1>Our Products</h1>
+            <p>Explore our comprehensive range of industrial solutions</p>
+        </div>
+    </div>
+
+    <!-- The Product Grid Section: Content loaded by main.js -->
+    <!-- The Product Grid Section: Content loaded by products_grid.js -->
+    <div id="products-grid">
+        <div class="loading-spinner" style="text-align:center; width:100%; padding:2rem; grid-column: 1/-1;">Loading
+            products...</div>
+    </div>
+
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <!-- Note: Load data first, then grid logic -->
+    <script src="js/products_data.js"></script>
+    <script src="js/products_grid.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/hamburger.js"></script>
+</body>
+
+</html>

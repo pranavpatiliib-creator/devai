@@ -1,0 +1,56 @@
+# =========================
+# Dependencies
+# =========================
+node_modules/
+
+# =========================
+# Build / Output folders
+# =========================
+dist/
+build/
+.out/
+.next/
+coverage/
+
+# =========================
+# Environment files
+# =========================
+.env
+.env.local
+.env.development
+.env.production
+
+# =========================
+# Logs
+# =========================
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.log
+
+# =========================
+# OS / Editor junk
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# =========================
+# Large media (DO NOT commit)
+# =========================
+videos/
+uploads/
+assets/large-images/
+*.mp4
+*.mov
+*.zip
+*.rar
+*.7z
+*.psd
+
+# =========================
+# Cache
+# =========================
+.cache/
+.tmp/

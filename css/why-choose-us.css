@@ -1,0 +1,17 @@
+/* Why Choose Us section styles */
+
+.feature-card {
+    text-align: center;
+    padding: 2rem;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: #003d82;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    color: #003d82;
+    margin-bottom: 0.5rem;
+}

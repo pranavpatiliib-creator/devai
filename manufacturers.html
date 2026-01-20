@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Manufacturers | Devai Technologies</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/manufacturers.css">
+</head>
+
+<body>
+    <!-- Header Component -->
+    <div id="header"></div>
+
+    <div class="manufacturers-page">
+        <header class="manufacturer-header">
+            <div class="container">
+                <h1>Our Manufacturing Partners</h1>
+                <p>We partner with world-class industrial brands to bring you the highest quality components and
+                    solutions.</p>
+            </div>
+        </header>
+
+        <div class="container">
+            <div id="manufacturers-grid" class="manufacturers-grid">
+                <!-- Cards will be populated here by JS -->
+                <div class="loading-spinner" style="text-align:center; width:100%; padding:2rem;">Loading
+                    manufacturers...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+    <div id="floating-buttons"></div>
+
+    <!-- Scripts -->
+    <script src="js/hamburger.js"></script>
+    <script src="js/main.js"></script> <!-- Loads header/footer -->
+
+    <!-- Data Source -->
+    <script src="js/manufacturers_data.js"></script>
+
+    <!-- Page Logic -->
+    <script src="js/manufacturers.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+/* Responsive styles */
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        position: relative;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .brand-center {
+        font-size: 1.2rem;
+        /* Reduce size for mobile */
+        order: 2;
+        width: auto;
+    }
+
+    .logo {
+        order: 1;
+    }
+
+    .hamburger {
+        display: block;
+        order: 3;
+    }
+
+    .search-bar {
+        display: flex;
+        width: 100%;
+        order: 4;
+        margin-top: 1rem;
+        justify-content: center;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #000000;
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links a:hover {
+        transform: none;
+        background: rgba(255, 215, 0, 0.1);
+    }
+
+    .hero-wrapper {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .slideshow-container {
+        max-width: 100%;
+    }
+
+    .slide {
+        height: 300px;
+    }
+
+    .floating-buttons {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .floating-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    /* Reduce animation intensity on mobile for performance */
+    header {
+        animation-duration: 0.5s;
+    }
+
+    .logo {
+        animation-duration: 1s;
+        font-size: 1.5rem;
+        /* Smaller font for mobile to accommodate doubled text */
+        text-align: center;
+        word-break: break-word;
+        /* Allow breaking long text */
+    }
+
+    .nav-links {
+        width: 100%;
+        /* Ensure full width on mobile */
+    }
+}

@@ -1,0 +1,22 @@
+/* Main CSS file - imports all modules */
+
+/* Base styles: reset, variables, typography, global styles */
+@import "base.css";
+
+/* Layout styles: grid, flex, containers, spacing utilities */
+@import "layout.css";
+
+/* Section-specific styles */
+@import "header.css";
+@import "hero.css";
+@import "products.css";
+@import "gallery.css";
+@import "why-choose-us.css";
+@import "testimonials.css";
+@import "cta.css";
+@import "contact.css";
+@import "footer.css";
+@import "floating-buttons.css";
+
+/* Responsive styles */
+@import "responsive.css";
