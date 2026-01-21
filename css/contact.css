@@ -114,16 +114,61 @@
 }
 
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
     width: 100%;
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 6px;
     font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #003d82;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: #ffd700;
+    color: #001f42;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submit-btn:hover {
+    background: #ffed4e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 .contact-map {
@@ -139,12 +184,454 @@
     margin-bottom: 40px;
 }
 
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f4f8;
+    border-radius: 50%;
+    color: #003d82;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    background: #ffd700;
+    transform: translateY(-3px);
+}
+
+/* Tablets and Medium Devices */
 @media (max-width: 992px) {
     .contact-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-hero {
+        padding: 140px 4% 50px;
     }
 
     .contact-hero h1 {
         font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .contact-section {
+        padding: 60px 4%;
+    }
+
+    .contact-card {
+        padding: 2rem;
+    }
+
+    .owner-thumbnail {
+        width: 90px;
+        height: 90px;
+    }
+
+    .owner-meta h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Small Tablets */
+@media (max-width: 768px) {
+    .contact-hero {
+        padding: 120px 5% 40px;
+    }
+
+    .contact-hero h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .contact-section {
+        padding: 50px 5%;
+    }
+
+    .contact-card {
+        padding: 1.5rem;
+    }
+
+    .owner-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .owner-thumbnail {
+        width: 80px;
+        height: 80px;
+    }
+
+    .owner-meta h3 {
+        font-size: 1.2rem;
+    }
+
+    .contact-link {
+        padding: 0.75rem;
+    }
+
+    .contact-link:hover {
+        transform: translateX(5px);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 0.9375rem;
+        padding: 0.75rem;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 0.875rem;
+        font-size: 0.9375rem;
+    }
+
+    .social-links {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .map-wrapper {
+        min-height: 300px;
+    }
+}
+
+/* Large Mobile Devices */
+@media (max-width: 576px) {
+    .contact-hero {
+        padding: 100px 5% 30px;
+    }
+
+    .contact-hero h1 {
+        font-size: 1.75rem;
+        line-height: 1.15;
+    }
+
+    .contact-section {
+        padding: 40px 5%;
+    }
+
+    .contact-card {
+        padding: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .owner-thumbnail {
+        width: 70px;
+        height: 70px;
+    }
+
+    .owner-meta h3 {
+        font-size: 1.1rem;
+    }
+
+    .owner-meta .role {
+        font-size: 0.8rem;
+    }
+
+    .contact-link .icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+
+    .link-info label {
+        font-size: 0.7rem;
+    }
+
+    .link-info span {
+        font-size: 1rem;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-group label {
+        font-size: 0.875rem;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 0.875rem;
+        padding: 0.625rem;
+    }
+
+    .form-group textarea {
+        min-height: 120px;
+    }
+
+    .submit-btn {
+        font-size: 0.875rem;
+        padding: 0.75rem;
+    }
+
+    .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+
+    .map-wrapper {
+        min-height: 250px;
+    }
+}
+
+/* iPhone and Small Mobile */
+@media (max-width: 430px) {
+    .contact-hero {
+        padding: 90px 4% 25px;
+    }
+
+    .contact-hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .contact-card {
+        padding: 1rem;
+    }
+
+    .owner-thumbnail {
+        width: 65px;
+        height: 65px;
+        border-width: 2px;
+    }
+
+    .owner-meta h3 {
+        font-size: 1rem;
+    }
+
+    .owner-meta .role {
+        font-size: 0.75rem;
+    }
+
+    .contact-link {
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .contact-link .icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+
+    .link-info span {
+        font-size: 0.95rem;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 14px;
+        padding: 0.625rem;
+    }
+
+    .submit-btn {
+        font-size: 14px;
+        padding: 0.625rem;
+    }
+
+    .social-links a {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+    }
+
+    .map-wrapper {
+        min-height: 230px;
+    }
+}
+
+/* Very Small Devices (iPhone SE, older models) */
+@media (max-width: 375px) {
+    .contact-hero {
+        padding: 80px 4% 20px;
+    }
+
+    .contact-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .contact-card {
+        padding: 0.875rem;
+    }
+
+    .owner-thumbnail {
+        width: 60px;
+        height: 60px;
+    }
+
+    .owner-meta h3 {
+        font-size: 0.95rem;
+    }
+
+    .contact-link .icon {
+        width: 36px;
+        height: 36px;
+        font-size: 0.95rem;
+    }
+
+    .link-info span {
+        font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 13px;
+        padding: 0.5rem;
+    }
+
+    .form-group textarea {
+        min-height: 100px;
+    }
+
+    .submit-btn {
+        font-size: 13px;
+    }
+
+    .social-links a {
+        width: 36px;
+        height: 36px;
+        font-size: 0.95rem;
+    }
+
+    .map-wrapper {
+        min-height: 200px;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 320px) {
+    .contact-hero {
+        padding: 70px 3% 20px;
+    }
+
+    .contact-hero h1 {
+        font-size: 1.35rem;
+    }
+
+    .contact-card {
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .owner-thumbnail {
+        width: 55px;
+        height: 55px;
+    }
+
+    .owner-meta h3 {
+        font-size: 0.9rem;
+    }
+
+    .contact-link .icon {
+        width: 34px;
+        height: 34px;
+        font-size: 0.9rem;
+    }
+
+    .link-info label {
+        font-size: 0.65rem;
+    }
+
+    .link-info span {
+        font-size: 0.85rem;
+    }
+
+    .form-group label {
+        font-size: 0.8125rem;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        font-size: 12px;
+        padding: 0.5rem;
+    }
+
+    .submit-btn {
+        font-size: 12px;
+        padding: 0.5rem;
+    }
+
+    .social-links a {
+        width: 34px;
+        height: 34px;
+        font-size: 0.9rem;
+    }
+
+    .map-wrapper {
+        min-height: 180px;
+    }
+}
+
+/* Common Mobile Optimizations */
+@media (max-width: 768px) {
+
+    /* Prevent zoom on input focus for iOS */
+    input:focus,
+    textarea:focus,
+    select:focus {
+        font-size: 16px;
+    }
+
+    /* Better touch targets (44px minimum for iOS) */
+    .form-group input,
+    .form-group textarea,
+    .form-group select,
+    .submit-btn {
+        min-height: 44px;
+    }
+
+    .contact-link {
+        min-height: 44px;
+    }
+
+    /* Optimize for touch */
+    .contact-link {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Better error message display */
+    .form-error {
+        font-size: 0.8125rem;
+        margin-top: 0.25rem;
+        color: #d32f2f;
+    }
+
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* Word break for long content */
+    .link-info span {
+        word-break: break-word;
+    }
+}
+
+/* iPhone Safe Area Support */
+@media (max-width: 430px) {
+    .contact-hero {
+        padding-left: max(4%, env(safe-area-inset-left));
+        padding-right: max(4%, env(safe-area-inset-right));
+    }
+
+    .contact-section {
+        padding-left: max(5%, env(safe-area-inset-left));
+        padding-right: max(5%, env(safe-area-inset-right));
     }
 }
