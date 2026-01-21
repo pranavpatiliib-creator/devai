@@ -7,9 +7,22 @@
     <title>Our Product Suppliers | Devai Technologies</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/manufacturers.css">
+    <link rel="stylesheet" href="css/preloader.css">
 </head>
 
-<body>
+<body class="loading">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-rings">
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+        </div>
+        <div class="preloader-content">
+            <img src="logo_transparent.png" alt="Devai Logo" class="preloader-logo">
+            <h1 class="brand-text-loader">DEVAI <span>TECHNOLOGIES</span></h1>
+        </div>
+    </div>
+
     <!-- Header Component -->
     <div id="header"></div>
 
@@ -44,6 +57,7 @@
 
     <!-- Page Logic -->
     <script src="js/manufacturers.js"></script>
+    <script src="js/preloader.js"></script>
 </body>
 
 </html>

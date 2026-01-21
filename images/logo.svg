@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <clipPath id="clip">
+      <rect width="400" height="400"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip)">
+    <!-- Symbol: D (Green) - Increased weight for better contrast -->
+    <path d="M120 100h140c77.3 0 140 62.7 140 140s-62.7 140-140 140h-20" 
+          stroke="#8cc63f" stroke-width="70" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Symbol: t (Blue) - Nested inside, visually balanced -->
+    <path d="M160 40v240c0 44.2 35.8 80 80 80h20" 
+          stroke="#29abe2" stroke-width="70" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M80 180h160" 
+          stroke="#29abe2" stroke-width="70" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

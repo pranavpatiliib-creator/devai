@@ -10,9 +10,22 @@
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/owner.css">
     <!-- Reusing existing styles where applicable -->
+    <link rel="stylesheet" href="css/preloader.css">
 </head>
 
-<body>
+<body class="loading">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-rings">
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+        </div>
+        <div class="preloader-content">
+            <img src="logo_transparent.png" alt="Devai Logo" class="preloader-logo">
+            <h1 class="brand-text-loader">DEVAI <span>TECHNOLOGIES</span></h1>
+        </div>
+    </div>
+
     <!-- Main container for dynamic components -->
     <div id="header"></div>
 
@@ -26,47 +39,34 @@
     <!-- Product Categories Section -->
     <section class="product-categories">
         <div class="card-grid">
-            <!-- 1. Automation & Control Systems -->
-            <div class="category-card" onclick="openCategory('automation')">
+            <a href="automation.html" class="category-card">
                 <h3>Automation & Control</h3>
                 <span>View Products →</span>
-            </div>
-
-            <!-- 2. Electrical Components -->
-            <div class="category-card" onclick="openCategory('electrical')">
+            </a>
+            <a href="electrical.html" class="category-card">
                 <h3>Electrical Components</h3>
                 <span>View Products →</span>
-            </div>
-
-            <!-- 3. Hydraulics & Pneumatics -->
-            <div class="category-card" onclick="openCategory('hydraulics')">
+            </a>
+            <a href="hydraulics.html" class="category-card">
                 <h3>Hydraulics & Pneumatics</h3>
                 <span>View Products →</span>
-            </div>
-
-            <!-- 4. Industrial Instruments -->
-            <div class="category-card" onclick="openCategory('instruments')">
+            </a>
+            <a href="instruments.html" class="category-card">
                 <h3>Industrial Instruments</h3>
                 <span>View Products →</span>
-            </div>
-
-            <!-- 5. Mechanical & Power Transmission -->
-            <div class="category-card" onclick="openCategory('mechanical')">
+            </a>
+            <a href="mechanical.html" class="category-card">
                 <h3>Mechanical & Transmission</h3>
                 <span>View Products →</span>
-            </div>
-
-            <!-- 6. Safety & Security Systems -->
-            <div class="category-card" onclick="openCategory('safety')">
+            </a>
+            <a href="safety.html" class="category-card">
                 <h3>Safety & Security</h3>
                 <span>View Products →</span>
-            </div>
-
-            <!-- 7. Spare Parts & Accessories -->
-            <div class="category-card" onclick="openCategory('spares')">
+            </a>
+            <a href="spares.html" class="category-card">
                 <h3>Spare Parts & Accessories</h3>
                 <span>View Products →</span>
-            </div>
+            </a>
         </div>
     </section>
 
@@ -74,9 +74,10 @@
 
     <div id="footer"></div>
 
- 
+
     <script src="js/main.js"></script>
     <script src="js/hamburger.js"></script>
+    <script src="js/preloader.js"></script>
 </body>
 
 </html

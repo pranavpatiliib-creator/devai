@@ -1,111 +1,67 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const gridContainer = document.getElementById('products-grid');
-
+// Function to render products grid
+function renderProductsGrid(products, containerId) {
+    const gridContainer = document.getElementById(containerId);
     if (!gridContainer) return;
 
-    // Check if data is available
-    if (typeof productsData === 'undefined' || !productsData || productsData.length === 0) {
-        gridContainer.innerHTML = '<p class="no-data">No product data available.</p>';
+    if (!products || products.length === 0) {
+        gridContainer.innerHTML = '<p class="no-data">No product data available in this category.</p>';
         return;
     }
 
-    // Clear loading spinner before rendering products
     gridContainer.innerHTML = '';
 
-    productsData.forEach(product => {
-        // Create card wrapper
+    products.forEach(product => {
         const card = document.createElement('div');
         card.className = 'product-flip-card';
 
-        // Add click event for mobile flip interaction
-        card.addEventListener('click', function () {
+        // Click-based interaction
+        card.addEventListener('click', function (e) {
+            // Prevent flip if clicking the button (optional, but requested click to flip)
+            // However, usually we want the whole card to flip.
             this.classList.toggle('flipped');
         });
 
-        // Safe fallbacks
         const name = product.productName || 'Unknown Product';
-        const image = product.image || 'images/placeholder.png';
-        const mfg = product.manufacturerName || '';
+        const image = product.image || 'images/placeholder_product.png';
+        const mfg = product.manufacturerName || 'Premium Brand';
         const descShort = product.shortDescription || '';
-        const descFull = product.fullDescription || 'No description available.';
+        const descFull = product.fullDescription || 'Detailed specifications available on request.';
         const category = product.category || 'Industrial';
 
         card.innerHTML = `
             <div class="product-flip-card-inner">
-                <!-- Front Side -->
                 <div class="product-flip-card-front">
                     <span class="category-tag">${category}</span>
                     <div class="image-wrapper">
                         <img src="${image}" alt="${name}" loading="lazy" onerror="this.src='images/placeholder_product.png'">
                     </div>
                     <div class="product-info-front">
+                        <p class="product-supplier">${mfg}</p>
                         <h3>${name}</h3>
-                        ${mfg ? `<p class="product-supplier">${mfg}</p>` : ''}
                         <p class="short-desc">${descShort}</p>
                     </div>
-                    <div class="flip-hint">Click to details ↻</div>
+                    <div class="flip-hint">Click for Details ↻</div>
                 </div>
-
-                <!-- Back Side -->
                 <div class="product-flip-card-back">
                     <h3>${name}</h3>
                     <div class="back-content">
                         <p class="full-desc">${descFull}</p>
-                        <a href="https://wa.me/919421493934?text=${encodeURIComponent('Hi Sagar , I am interested in: ' + name + '. Please provide more details and the budget quation for it.')}" target="_blank" rel="noopener noreferrer" class="enquire-btn">Enquire Now</a>
+                        <a href="https://wa.me/919421493934?text=${encodeURIComponent('Hi Sagar, I am interested in: ' + name + '. Please provide more details and a quote.')}" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="enquire-btn"
+                           onclick="event.stopPropagation();">Enquire Now</a>
                     </div>
                 </div>
             </div>
         `;
-
         gridContainer.appendChild(card);
-    });
-});
-
-// Search functionality
-function initializeSearch() {
-    const searchInput = document.querySelector('.search-input');
-    if (!searchInput) {
-        // Retry if search input not yet loaded
-        setTimeout(initializeSearch, 100);
-        return;
-    }
-
-    const productCards = gridContainer.querySelectorAll('.product-flip-card');
-
-    searchInput.addEventListener('input', function () {
-        const searchTerm = this.value.toLowerCase().trim();
-
-        productCards.forEach(card => {
-            const productName = card.querySelector('h3').textContent.toLowerCase();
-            const productSupplier = card.querySelector('.product-supplier') ? card.querySelector('.product-supplier').textContent.toLowerCase() : '';
-            const category = card.querySelector('.category-tag').textContent.toLowerCase();
-
-            const matches = productName.includes(searchTerm) ||
-                productSupplier.includes(searchTerm) ||
-                category.includes(searchTerm);
-
-            card.style.display = matches || searchTerm === '' ? '' : 'none';
-        });
     });
 }
 
-// Initialize search after products are rendered
-initializeSearch();
-
-// Category mapping for filtering
-const categoryMapping = {
-    'automation': ['Automation'],
-    'electrical': ['Switchgear', 'Controlgear', 'Power Supply', 'Panels'],
-    'hydraulics': ['Accessories', 'Mechanical'],
-    'instruments': ['Sensors', 'Testing'],
-    'mechanical': ['Motors', 'Mechanical'],
-    'safety': ['Safety'],
-    'spares': ['Accessories', 'Cables', 'Enclosures']
-};
-
-// Function to open category page
+// Function to open category or product page (simplified)
 function openCategory(categoryId) {
-    const categoryPages = {
+    const pages = {
         'automation': 'automation.html',
         'electrical': 'electrical.html',
         'hydraulics': 'hydraulics.html',
@@ -114,68 +70,33 @@ function openCategory(categoryId) {
         'safety': 'safety.html',
         'spares': 'spares.html'
     };
-    const page = categoryPages[categoryId];
-    if (page) {
-        window.location.href = page;
+    if (pages[categoryId]) {
+        window.location.href = pages[categoryId];
     }
 }
 
-// Function to filter products by sub-category
-function filterBySubCategory(subCategory) {
-    const gridContainer = document.getElementById('products-grid');
-    if (!gridContainer) return;
+// Global search (Optional simplification)
+function initializeSearch() {
+    const searchInput = document.querySelector('.search-input');
+    if (!searchInput) return;
 
-    // Clear existing content
-    gridContainer.innerHTML = '';
+    searchInput.addEventListener('input', function () {
+        const term = this.value.toLowerCase().trim();
+        const cards = document.querySelectorAll('.product-flip-card');
 
-    // Filter products by sub-category
-    const filteredProducts = productsData.filter(product => product.subCategory === subCategory);
-
-    if (filteredProducts.length === 0) {
-        gridContainer.innerHTML = '<p class="no-data">No products found in this sub-category.</p>';
-        return;
-    }
-
-    // Render filtered products
-    filteredProducts.forEach(product => {
-        const card = document.createElement('div');
-        card.className = 'product-flip-card';
-
-        card.addEventListener('click', function () {
-            this.classList.toggle('flipped');
+        cards.forEach(card => {
+            const text = card.textContent.toLowerCase();
+            card.style.display = text.includes(term) ? '' : 'none';
         });
-
-        const name = product.productName || 'Unknown Product';
-        const image = product.image || 'images/placeholder_product.png';
-        const mfg = product.manufacturerName || '';
-        const descShort = product.shortDescription || '';
-        const descFull = product.fullDescription || 'No description available.';
-        const category = product.category || 'Industrial';
-
-        card.innerHTML = `
-            <div class="product-flip-card-inner">
-                <div class="product-flip-card-front">
-                    <span class="category-tag">${category}</span>
-                    <div class="image-wrapper">
-                        <img src="${image}" alt="${name}" loading="lazy" onerror="this.src='images/placeholder_product.png'">
-                    </div>
-                    <div class="product-info-front">
-                        <h3>${name}</h3>
-                        ${mfg ? `<p class="product-supplier">${mfg}</p>` : ''}
-                        <p class="short-desc">${descShort}</p>
-                    </div>
-                    <div class="flip-hint">Click to details ↻</div>
-                </div>
-                <div class="product-flip-card-back">
-                    <h3>${name}</h3>
-                    <div class="back-content">
-                        <p class="full-desc">${descFull}</p>
-                        <a href="https://wa.me/919421493934?text=${encodeURIComponent('Hi Sagar , I am interested in: ' + name + '. Please provide more details and the budget quation for it.')}" target="_blank" rel="noopener noreferrer" class="enquire-btn">Enquire Now</a>
-                    </div>
-                </div>
-            </div>
-        `;
-
-        gridContainer.appendChild(card);
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    // If we are on products.html, we might want to render all or specific categories
+    const mainGrid = document.getElementById('products-grid');
+    if (mainGrid && typeof productsData !== 'undefined') {
+        renderProductsGrid(productsData, 'products-grid');
+    }
+    initializeSearch();
+});
+

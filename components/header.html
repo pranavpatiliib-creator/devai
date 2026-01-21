@@ -1,14 +1,14 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <img src="./logo.jpeg" alt="Devai Logo">
+            <img src="images/logo.svg" alt="Devai Logo">
+            <div class="brand-center">DEVAI TECHNOLOGIES</div>
         </div>
 
-        <div class="brand-center">DEVAI TECHNOLOGIES</div>
-
         <div class="search-bar">
-            <input type="text" placeholder="Search products..." class="search-input">
+            <input type="text" placeholder="Search products..." class="search-input" aria-label="Search products">
             <button class="search-btn">🔍</button>
+            <div id="search-dropdown" class="search-dropdown"></div>
         </div>
 
         <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">☰</div>
@@ -17,8 +17,10 @@
     <ul class="nav-links" id="nav-links" role="menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="products.html#products">Products</a></li>
+        <li><a href="products.html">Products</a></li>
         <li><a href="product-suppliers.html">Product Suppliers</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
+    <script src="js/search-data.js"></script>
+    <script src="js/search.js"></script>
 </header>

@@ -10,9 +10,22 @@
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/owner.css">
     <!-- Reusing existing styles where applicable -->
+    <link rel="stylesheet" href="css/preloader.css">
 </head>
 
-<body>
+<body class="loading">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-rings">
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+        </div>
+        <div class="preloader-content">
+            <img src="logo_transparent.png" alt="Devai Logo" class="preloader-logo">
+            <h1 class="brand-text-loader">DEVAI <span>TECHNOLOGIES</span></h1>
+        </div>
+    </div>
+
     <!-- Main container for dynamic components -->
     <div id="header"></div>
 
@@ -23,34 +36,24 @@
         </div>
     </div>
 
-    <!-- Sub-Categories Grid -->
-    <section class="product-categories">
-        <div class="card-grid">
-            <!-- Switch Mode Power Supplies -->
-            <div class="category-card" onclick="filterBySubCategory('Switch Mode Power Supplies')">
-                <h3>Switch Mode Power Supplies</h3>
-                <span>View Products →</span>
-            </div>
-
-            <!-- Power Meters and Analyzers -->
-            <div class="category-card" onclick="filterBySubCategory('Power Meters and Analyzers')">
-                <h3>Power Meters and Analyzers</h3>
-                <span>View Products →</span>
-            </div>
-
-            <!-- Power Quality Analyzer -->
-            <div class="category-card" onclick="filterBySubCategory('Power Quality Analyzer')">
-                <h3>Power Quality Analyzer</h3>
-                <span>View Products →</span>
-            </div>
-
-            <!-- PF Improvement Capacitor -->
-            <div class="category-card" onclick="filterBySubCategory('PF Improvement Capacitor')">
-                <h3>PF Improvement Capacitor</h3>
-                <span>View Products →</span>
-            </div>
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div id="products-grid" class="products-grid">
+            <!-- Products will be rendered here -->
         </div>
     </section>
+
+    <script src="js/products_data.js"></script>
+    <script src="js/products_grid.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const powerProducts = productsData.filter(p =>
+                p.category === 'Power Supply' ||
+                p.category === 'Power Supply & Energy Management'
+            );
+            renderProductsGrid(powerProducts, 'products-grid');
+        });
+    </script>
 
     <div id="footer"></div>
 
@@ -59,6 +62,7 @@
     <script src="js/products_grid.js"></script>
     <script src="js/main.js"></script>
     <script src="js/hamburger.js"></script>
+    <script src="js/preloader.js"></script>
 </body>
 
 </html>

@@ -10,75 +10,37 @@
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/owner.css">
     <!-- Reusing existing styles where applicable -->
+    <link rel="stylesheet" href="css/preloader.css">
 </head>
 
-<body>
+<body class="loading">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-rings">
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+        </div>
+        <div class="preloader-content">
+            <img src="logo_transparent.png" alt="Devai Logo" class="preloader-logo">
+            <h1 class="brand-text-loader">DEVAI <span>TECHNOLOGIES</span></h1>
+        </div>
+    </div>
+
     <!-- Main container for dynamic components -->
     <div id="header"></div>
 
     <div class="products-hero">
         <div class="container">
+            <a href="products.html" class="back-link">← Back to All Products</a>
             <h1>Industrial Instruments</h1>
             <p>Explore our comprehensive range of industrial instruments</p>
         </div>
     </div>
 
-    <!-- Sub-Categories Grid -->
-    <section class="product-categories">
-        <div class="card-grid">
-            <!-- Tower Light -->
-            <div class="category-card" onclick="filterBySubCategory('Tower Light')">
-                <h3>Tower Light</h3>
-                <span>View Products →</span>
-            </div>
-
-            <!-- Warning / Revolving Light -->
-            <div class="category-card" onclick="filterBySubCategory('Warning / Revolving Light')">
-                <h3>Warning / Revolving Light</h3>
-                <span>View Products →</span>
-            </div>
-
-            <!-- Siren / Buzzer -->
-            <div class="category-card" onclick="filterBySubCategory('Siren / Buzzer')">
-                <h3>Siren / Buzzer</h3>
-                <span>View Products →</span>
-            </div>
-
-            <!-- Digital Clamp Meter -->
-            <div class="category-card" onclick="filterBySubCategory('Digital Clamp Meter')">
-                <h3>Digital Clamp Meter</h3>
-                <span>View Products →</span>
-            </div>
-
-            <!-- Digital Multimeter -->
-            <div class="category-card" onclick="filterBySubCategory('Digital Multimeter')">
-                <h3>Digital Multimeter</h3>
-                <span>View Products →</span>
-            </div>
-
-            <!-- Electronic Measuring Meters -->
-            <div class="category-card" onclick="filterBySubCategory('Electronic Measuring Meters')">
-                <h3>Electronic Measuring Meters</h3>
-                <span>View Products →</span>
-            </div>
-
-            <!-- LED Indicating Voltmeter / Ammeter -->
-            <div class="category-card" onclick="filterBySubCategory('LED Indicating Voltmeter / Ammeter')">
-                <h3>LED Indicating Voltmeter / Ammeter</h3>
-                <span>View Products →</span>
-            </div>
-
-            <!-- Multifunction Meter -->
-            <div class="category-card" onclick="filterBySubCategory('Multifunction Meter')">
-                <h3>Multifunction Meter</h3>
-                <span>View Products →</span>
-            </div>
-
-            <!-- Hour Meter -->
-            <div class="category-card" onclick="filterBySubCategory('Hour Meter')">
-                <h3>Hour Meter</h3>
-                <span>View Products →</span>
-            </div>
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div id="products-grid" class="products-grid">
+            <!-- Products will be rendered here -->
         </div>
     </section>
 
@@ -87,8 +49,26 @@
     <!-- Scripts -->
     <script src="js/products_data.js"></script>
     <script src="js/products_grid.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const instrumentProducts = productsData.filter(p =>
+                p.category === 'Industrial Instruments' ||
+                p.category === 'Sensors' ||
+                p.category === 'Testing' ||
+                p.category === 'Industrial Indicators & Signaling'
+            );
+            renderProductsGrid(instrumentProducts, 'products-grid');
+        });
+    </script>
+
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="js/products_data.js"></script>
+    <script src="js/products_grid.js"></script>
     <script src="js/main.js"></script>
     <script src="js/hamburger.js"></script>
+    <script src="js/preloader.js"></script>
 </body>
 
 </html>

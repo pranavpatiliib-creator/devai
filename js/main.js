@@ -52,6 +52,9 @@ async function loadAllComponents() {
 
     // Initialize JavaScript functionality after components are loaded
     initializeScripts();
+
+    // Signal that everything is loaded (for the preloader)
+    document.dispatchEvent(new CustomEvent('pageComponentsLoaded'));
 }
 
 // Initialize scripts after components are loaded

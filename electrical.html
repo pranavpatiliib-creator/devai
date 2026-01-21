@@ -1,4 +1,5 @@
-q<!DOCTYPE html>
+q
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,95 +11,52 @@ q<!DOCTYPE html>
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/owner.css">
     <!-- Reusing existing styles where applicable -->
+    <link rel="stylesheet" href="css/preloader.css">
 </head>
 
-<body>
+<body class="loading">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-rings">
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+        </div>
+        <div class="preloader-content">
+            <img src="logo_transparent.png" alt="Devai Logo" class="preloader-logo">
+            <h1 class="brand-text-loader">DEVAI <span>TECHNOLOGIES</span></h1>
+        </div>
+    </div>
+
     <!-- Main container for dynamic components -->
     <div id="header"></div>
 
     <div class="products-hero">
         <div class="container">
+            <a href="products.html" class="back-link">← Back to All Products</a>
             <h1>Electrical Components</h1>
             <p>Explore our comprehensive range of electrical components</p>
         </div>
     </div>
 
-    <!-- Sub-Categories Grid -->
-    <section class="product-categories">
-        <div class="card-grid">
-            <!-- Air Circuit Breakers -->
-            <div class="category-card" onclick="filterBySubCategory('Air Circuit Breakers')">
-                <h3>Air Circuit Breakers</h3>
-                <span>View Products →</span>
-            </div>
-
-            <!-- Moulded Case Circuit Breakers -->
-            <div class="category-card" onclick="filterBySubCategory('Moulded Case Circuit Breakers')">
-                <h3>Moulded Case Circuit Breakers</h3>
-                <span>View Products →</span>
-            </div>
-
-            <!-- Switch Fuse Units and Isolators -->
-            <div class="category-card" onclick="filterBySubCategory('Switch Fuse Units and Isolators')">
-                <h3>Switch Fuse Units and Isolators</h3>
-                <span>View Products →</span>
-            </div>
-
-            <!-- Auto Source Changeover Systems -->
-            <div class="category-card" onclick="filterBySubCategory('Auto Source Changeover Systems')">
-                <h3>Auto Source Changeover Systems</h3>
-                <span>View Products →</span>
-            </div>
-
-            <!-- Modular Circuit Breakers -->
-            <div class="category-card" onclick="filterBySubCategory('Modular Circuit Breakers')">
-                <h3>Modular Circuit Breakers</h3>
-                <span>View Products →</span>
-            </div>
-
-            <!-- Residual Current Circuit Breakers -->
-            <div class="category-card" onclick="filterBySubCategory('Residual Current Circuit Breakers')">
-                <h3>Residual Current Circuit Breakers</h3>
-                <span>View Products →</span>
-            </div>
-
-            <!-- Surge Arresters -->
-            <div class="category-card" onclick="filterBySubCategory('Surge Arresters')">
-                <h3>Surge Arresters</h3>
-                <span>View Products →</span>
-            </div>
-
-            <!-- Time Switches / Light Sensitive Switches -->
-            <div class="category-card" onclick="filterBySubCategory('Time Switches / Light Sensitive Switches')">
-                <h3>Time Switches / Light Sensitive Switches</h3>
-                <span>View Products →</span>
-            </div>
-
-            <!-- Motor Protection Circuit Breakers -->
-            <div class="category-card" onclick="filterBySubCategory('Motor Protection Circuit Breakers')">
-                <h3>Motor Protection Circuit Breakers</h3>
-                <span>View Products →</span>
-            </div>
-
-            <!-- Power Contactors -->
-            <div class="category-card" onclick="filterBySubCategory('Power Contactors')">
-                <h3>Power Contactors</h3>
-                <span>View Products →</span>
-            </div>
-
-            <!-- Thermal Overload Relays -->
-            <div class="category-card" onclick="filterBySubCategory('Thermal Overload Relays')">
-                <h3>Thermal Overload Relays</h3>
-                <span>View Products →</span>
-            </div>
-
-            <!-- Electronic Over Current Relays -->
-            <div class="category-card" onclick="filterBySubCategory('Electronic Over Current Relays')">
-                <h3>Electronic Over Current Relays</h3>
-                <span>View Products →</span>
-            </div>
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div id="products-grid" class="products-grid">
+            <!-- Products will be rendered here directly -->
         </div>
     </section>
+
+    <script src="js/products_data.js"></script>
+    <script src="js/products_grid.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const electricalProducts = productsData.filter(p =>
+                p.category === 'Electrical Switching & Protection' ||
+                p.category === 'Electrical Components' ||
+                p.category === 'Switchgear'
+            );
+            renderProductsGrid(electricalProducts, 'products-grid');
+        });
+    </script>
 
     <div id="footer"></div>
 
@@ -107,6 +65,7 @@ q<!DOCTYPE html>
     <script src="js/products_grid.js"></script>
     <script src="js/main.js"></script>
     <script src="js/hamburger.js"></script>
+    <script src="js/preloader.js"></script>
 </body>
 
 </html>

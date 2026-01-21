@@ -10,24 +10,47 @@
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/owner.css">
     <!-- Reusing existing styles where applicable -->
+    <link rel="stylesheet" href="css/preloader.css">
 </head>
 
-<body>
+<body class="loading">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-rings">
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+        </div>
+        <div class="preloader-content">
+            <img src="logo_transparent.png" alt="Devai Logo" class="preloader-logo">
+            <h1 class="brand-text-loader">DEVAI <span>TECHNOLOGIES</span></h1>
+        </div>
+    </div>
+
     <!-- Main container for dynamic components -->
     <div id="header"></div>
 
     <div class="products-hero">
         <div class="container">
-            <h1>Controlgear</h1>
+            <a href="products.html" class="back-link">← Back to All Products</a>
+            <h1>Controlgear Components</h1>
             <p>Explore our comprehensive range of controlgear products</p>
         </div>
     </div>
 
-    <!-- Product Grid Section -->
-    <div id="products-grid">
-        <div class="loading-spinner" style="text-align:center; width:100%; padding:2rem; grid-column: 1/-1;">Loading
-            products...</div>
-    </div>
+    <section class="products-section">
+        <div id="products-grid" class="products-grid">
+            <!-- Products will be rendered here directly -->
+        </div>
+    </section>
+
+    <script src="js/products_data.js"></script>
+    <script src="js/products_grid.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const products = productsData.filter(p => p.category === 'Controlgear' || p.category === 'Automation & Control Components');
+            renderProductsGrid(products, 'products-grid');
+        });
+    </script>
 
     <div id="footer"></div>
 
@@ -36,6 +59,7 @@
     <script src="js/products_grid.js"></script>
     <script src="js/main.js"></script>
     <script src="js/hamburger.js"></script>
+    <script src="js/preloader.js"></script>
 </body>
 
 </html>
