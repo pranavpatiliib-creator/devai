@@ -1,8 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.querySelector('.search-input');
     const searchDropdown = document.getElementById('search-dropdown');
+    const searchBtn = document.querySelector('.search-btn');
 
     if (!searchInput || !searchDropdown) return;
+
+    if (searchBtn) {
+        searchBtn.addEventListener('click', () => {
+            const firstItem = searchDropdown.querySelector('.search-item:not(.no-results)');
+            if (firstItem) {
+                const url = firstItem.dataset.url;
+                if (url && url !== '#') {
+                    window.location.href = url;
+                }
+            }
+        });
+    }
 
     let debounceTimer;
 

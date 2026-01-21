@@ -36,19 +36,18 @@
 
 .brand-center {
     font-family: "Times New Roman", serif;
-    font-size: 2.4rem;
-    /* Slightly larger for presence */
+    font-size: 2.8rem;
+    /* Increased from 2.4rem */
     font-weight: 900;
     color: #ffffff;
     letter-spacing: 0.5px;
-    /* Tighter professional spacing */
     line-height: 1;
     white-space: nowrap;
 }
 
 .logo img {
-    height: 85px;
-    /* Large and dominant */
+    height: 110px;
+    /* Increased from 85px */
     width: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
@@ -71,6 +70,8 @@
     display: flex;
     gap: 0.5rem;
     align-items: center;
+    margin-right: -100px;
+    /* Offset to better center against the large logo */
 }
 
 .search-input {
@@ -192,7 +193,7 @@
    ========================= */
 
 main {
-    margin-top: 90px;
+    margin-top: 150px;
     /* desktop */
 }
 
@@ -264,7 +265,7 @@ main {
     }
 
     main {
-        margin-top: 70px;
+        margin-top: 100px;
         /* mobile header height */
     }
 }

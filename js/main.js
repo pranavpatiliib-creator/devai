@@ -144,12 +144,29 @@ function initializeScripts() {
     }
 
     // Smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    document.querySelectorAll('a[href^="#"], a[href*="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
+            const href = this.getAttribute('href');
+
+            // Only handle internal anchors on the current page
+            if (href.startsWith('#')) {
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            } else if (href.includes('#')) {
+                // For cross-page anchors (e.g., index.html#about), check if we are already on that page
+                const [path, hash] = href.split('#');
+                const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+                if (path === currentPage || (path === 'index.html' && currentPage === '')) {
+                    const target = document.querySelector('#' + hash);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
             }
         });
     });
