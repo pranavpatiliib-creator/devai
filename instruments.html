@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our Industrial Instruments products - Devai Technologies">
+    <title>Industrial Instruments - Devai Technologies</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/owner.css">
+    <!-- Reusing existing styles where applicable -->
+</head>
+
+<body>
+    <!-- Main container for dynamic components -->
+    <div id="header"></div>
+
+    <div class="products-hero">
+        <div class="container">
+            <h1>Industrial Instruments</h1>
+            <p>Explore our comprehensive range of industrial instruments</p>
+        </div>
+    </div>
+
+    <!-- Sub-Categories Grid -->
+    <section class="product-categories">
+        <div class="card-grid">
+            <!-- Tower Light -->
+            <div class="category-card" onclick="filterBySubCategory('Tower Light')">
+                <h3>Tower Light</h3>
+                <span>View Products →</span>
+            </div>
+
+            <!-- Warning / Revolving Light -->
+            <div class="category-card" onclick="filterBySubCategory('Warning / Revolving Light')">
+                <h3>Warning / Revolving Light</h3>
+                <span>View Products →</span>
+            </div>
+
+            <!-- Siren / Buzzer -->
+            <div class="category-card" onclick="filterBySubCategory('Siren / Buzzer')">
+                <h3>Siren / Buzzer</h3>
+                <span>View Products →</span>
+            </div>
+
+            <!-- Digital Clamp Meter -->
+            <div class="category-card" onclick="filterBySubCategory('Digital Clamp Meter')">
+                <h3>Digital Clamp Meter</h3>
+                <span>View Products →</span>
+            </div>
+
+            <!-- Digital Multimeter -->
+            <div class="category-card" onclick="filterBySubCategory('Digital Multimeter')">
+                <h3>Digital Multimeter</h3>
+                <span>View Products →</span>
+            </div>
+
+            <!-- Electronic Measuring Meters -->
+            <div class="category-card" onclick="filterBySubCategory('Electronic Measuring Meters')">
+                <h3>Electronic Measuring Meters</h3>
+                <span>View Products →</span>
+            </div>
+
+            <!-- LED Indicating Voltmeter / Ammeter -->
+            <div class="category-card" onclick="filterBySubCategory('LED Indicating Voltmeter / Ammeter')">
+                <h3>LED Indicating Voltmeter / Ammeter</h3>
+                <span>View Products →</span>
+            </div>
+
+            <!-- Multifunction Meter -->
+            <div class="category-card" onclick="filterBySubCategory('Multifunction Meter')">
+                <h3>Multifunction Meter</h3>
+                <span>View Products →</span>
+            </div>
+
+            <!-- Hour Meter -->
+            <div class="category-card" onclick="filterBySubCategory('Hour Meter')">
+                <h3>Hour Meter</h3>
+                <span>View Products →</span>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="js/products_data.js"></script>
+    <script src="js/products_grid.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/hamburger.js"></script>
+</body>
+
+</html>

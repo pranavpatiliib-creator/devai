@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our Mechanical & Power Transmission products - Devai Technologies">
+    <title>Mechanical & Transmission - Devai Technologies</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/owner.css">
+    <!-- Reusing existing styles where applicable -->
+</head>
+
+<body>
+    <!-- Main container for dynamic components -->
+    <div id="header"></div>
+
+    <div class="products-hero">
+        <div class="container">
+            <h1>Mechanical & Transmission</h1>
+            <p>Explore our comprehensive range of mechanical and power transmission products</p>
+        </div>
+    </div>
+
+    <!-- Sub-Categories Grid -->
+    <section class="product-categories">
+        <div class="card-grid">
+            <!-- Industrial Electric Motor -->
+            <div class="category-card" onclick="filterBySubCategory('Industrial Electric Motor')">
+                <h3>Industrial Electric Motor</h3>
+                <span>View Products →</span>
+            </div>
+
+            <!-- Industrial Gearbox -->
+            <div class="category-card" onclick="filterBySubCategory('Industrial Gearbox')">
+                <h3>Industrial Gearbox</h3>
+                <span>View Products →</span>
+            </div>
+
+            <!-- V Belt -->
+            <div class="category-card" onclick="filterBySubCategory('V Belt')">
+                <h3>V Belt</h3>
+                <span>View Products →</span>
+            </div>
+
+            <!-- Industrial Bearing -->
+            <div class="category-card" onclick="filterBySubCategory('Industrial Bearing')">
+                <h3>Industrial Bearing</h3>
+                <span>View Products →</span>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="js/products_data.js"></script>
+    <script src="js/products_grid.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/hamburger.js"></script>
+</body>
+
+</html>

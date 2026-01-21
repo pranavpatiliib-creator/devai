@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our Power Supply & Energy Management products - Devai Technologies">
+    <title>Power Supply & Energy Management - Devai Technologies</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/owner.css">
+    <!-- Reusing existing styles where applicable -->
+</head>
+
+<body>
+    <!-- Main container for dynamic components -->
+    <div id="header"></div>
+
+    <div class="products-hero">
+        <div class="container">
+            <h1>Power Supply & Energy Management</h1>
+            <p>Explore our comprehensive range of power supply and energy management solutions</p>
+        </div>
+    </div>
+
+    <!-- Sub-Categories Grid -->
+    <section class="product-categories">
+        <div class="card-grid">
+            <!-- Switch Mode Power Supplies -->
+            <div class="category-card" onclick="filterBySubCategory('Switch Mode Power Supplies')">
+                <h3>Switch Mode Power Supplies</h3>
+                <span>View Products →</span>
+            </div>
+
+            <!-- Power Meters and Analyzers -->
+            <div class="category-card" onclick="filterBySubCategory('Power Meters and Analyzers')">
+                <h3>Power Meters and Analyzers</h3>
+                <span>View Products →</span>
+            </div>
+
+            <!-- Power Quality Analyzer -->
+            <div class="category-card" onclick="filterBySubCategory('Power Quality Analyzer')">
+                <h3>Power Quality Analyzer</h3>
+                <span>View Products →</span>
+            </div>
+
+            <!-- PF Improvement Capacitor -->
+            <div class="category-card" onclick="filterBySubCategory('PF Improvement Capacitor')">
+                <h3>PF Improvement Capacitor</h3>
+                <span>View Products →</span>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="js/products_data.js"></script>
+    <script src="js/products_grid.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/hamburger.js"></script>
+</body>
+
+</html>

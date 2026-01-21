@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3>${name}</h3>
                     <div class="back-content">
                         <p class="full-desc">${descFull}</p>
-                        <a href="https://wa.me/919421493934?text=${encodeURIComponent('Hi, I am interested in: ' + name + '. Please provide more details.')}" target="_blank" rel="noopener noreferrer" class="enquire-btn">Enquire Now</a>
+                        <a href="https://wa.me/919421493934?text=${encodeURIComponent('Hi Sagar , I am interested in: ' + name + '. Please provide more details and the budget quation for it.')}" target="_blank" rel="noopener noreferrer" class="enquire-btn">Enquire Now</a>
                     </div>
                 </div>
             </div>
@@ -91,3 +91,91 @@ function initializeSearch() {
 
 // Initialize search after products are rendered
 initializeSearch();
+
+// Category mapping for filtering
+const categoryMapping = {
+    'automation': ['Automation'],
+    'electrical': ['Switchgear', 'Controlgear', 'Power Supply', 'Panels'],
+    'hydraulics': ['Accessories', 'Mechanical'],
+    'instruments': ['Sensors', 'Testing'],
+    'mechanical': ['Motors', 'Mechanical'],
+    'safety': ['Safety'],
+    'spares': ['Accessories', 'Cables', 'Enclosures']
+};
+
+// Function to open category page
+function openCategory(categoryId) {
+    const categoryPages = {
+        'automation': 'automation.html',
+        'electrical': 'electrical.html',
+        'hydraulics': 'hydraulics.html',
+        'instruments': 'instruments.html',
+        'mechanical': 'mechanical.html',
+        'safety': 'safety.html',
+        'spares': 'spares.html'
+    };
+    const page = categoryPages[categoryId];
+    if (page) {
+        window.location.href = page;
+    }
+}
+
+// Function to filter products by sub-category
+function filterBySubCategory(subCategory) {
+    const gridContainer = document.getElementById('products-grid');
+    if (!gridContainer) return;
+
+    // Clear existing content
+    gridContainer.innerHTML = '';
+
+    // Filter products by sub-category
+    const filteredProducts = productsData.filter(product => product.subCategory === subCategory);
+
+    if (filteredProducts.length === 0) {
+        gridContainer.innerHTML = '<p class="no-data">No products found in this sub-category.</p>';
+        return;
+    }
+
+    // Render filtered products
+    filteredProducts.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'product-flip-card';
+
+        card.addEventListener('click', function () {
+            this.classList.toggle('flipped');
+        });
+
+        const name = product.productName || 'Unknown Product';
+        const image = product.image || 'images/placeholder_product.png';
+        const mfg = product.manufacturerName || '';
+        const descShort = product.shortDescription || '';
+        const descFull = product.fullDescription || 'No description available.';
+        const category = product.category || 'Industrial';
+
+        card.innerHTML = `
+            <div class="product-flip-card-inner">
+                <div class="product-flip-card-front">
+                    <span class="category-tag">${category}</span>
+                    <div class="image-wrapper">
+                        <img src="${image}" alt="${name}" loading="lazy" onerror="this.src='images/placeholder_product.png'">
+                    </div>
+                    <div class="product-info-front">
+                        <h3>${name}</h3>
+                        ${mfg ? `<p class="product-supplier">${mfg}</p>` : ''}
+                        <p class="short-desc">${descShort}</p>
+                    </div>
+                    <div class="flip-hint">Click to details ↻</div>
+                </div>
+                <div class="product-flip-card-back">
+                    <h3>${name}</h3>
+                    <div class="back-content">
+                        <p class="full-desc">${descFull}</p>
+                        <a href="https://wa.me/919421493934?text=${encodeURIComponent('Hi Sagar , I am interested in: ' + name + '. Please provide more details and the budget quation for it.')}" target="_blank" rel="noopener noreferrer" class="enquire-btn">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        gridContainer.appendChild(card);
+    });
+}

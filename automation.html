@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our Automation & Control products - Devai Technologies">
+    <title>Automation & Control - Devai Technologies</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/owner.css">
+    <!-- Reusing existing styles where applicable -->
+</head>
+
+<body>
+    <!-- Main container for dynamic components -->
+    <div id="header"></div>
+
+    <div class="products-hero">
+        <div class="container">
+            <h1>Automation & Control</h1>
+            <p>Explore our comprehensive range of automation and control systems</p>
+        </div>
+    </div>
+
+    <!-- Products Grid -->
+    <section class="products-section">
+        <div id="products-grid" class="products-grid">
+            <!-- Products will be rendered here -->
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="js/products_data.js"></script>
+    <script src="js/products_grid.js"></script>
+    <script>
+        // Filter and render automation products
+        document.addEventListener('DOMContentLoaded', () => {
+            const automationProducts = productsData.filter(product => product.category === 'Automation & Control Components');
+            renderProductsGrid(automationProducts, 'products-grid');
+        });
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/hamburger.js"></script>
+</body>
+
+</html>
