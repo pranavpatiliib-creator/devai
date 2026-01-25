@@ -48,6 +48,15 @@
     background: #002456;
 }
 
+.email-btn {
+    background: #FF6B35;
+    color: white;
+}
+
+.email-btn:hover {
+    background: #E55A2B;
+}
+
 /* Mobile responsive styles */
 @media (max-width: 768px) {
     .floating-buttons-container {

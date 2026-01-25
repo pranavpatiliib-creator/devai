@@ -1,0 +1,544 @@
+/* About Us Page Styles */
+
+.about-us-page {
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.about-hero {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.about-hero p {
+    font-size: 1.3rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Mission & Vision Section */
+.mission-vision {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mission-card,
+.vision-card {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-card:hover,
+.vision-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.mission-card h2,
+.vision-card h2 {
+    color: #1e3c72;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #2a5298;
+    padding-bottom: 15px;
+}
+
+.mission-card p,
+.vision-card p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+/* Company Info Section */
+.company-info {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.company-info h2 {
+    font-size: 2.2rem;
+    color: #1e3c72;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.info-content p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Products Overview Section */
+.products-overview {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+}
+
+.products-overview h2 {
+    font-size: 2.2rem;
+    color: #1e3c72;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-item {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 4px solid #2a5298;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.product-item h3 {
+    color: #1e3c72;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.product-item p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 60px 20px;
+}
+
+.why-choose-us h2 {
+    font-size: 2.2rem;
+    color: #1e3c72;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    background: #2a5298;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 15px;
+    font-weight: bold;
+}
+
+.feature-card h3 {
+    color: #1e3c72;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Leadership Section */
+.leadership {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+}
+
+.leadership h2 {
+    font-size: 2.2rem;
+    color: #1e3c72;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.leadership-grid {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    opacity: 0.95;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+    padding: 15px 40px;
+    font-size: 1.05rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: #ff6b6b;
+    color: white;
+    border: 2px solid #ff6b6b;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: #ff6b6b;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background-color: white;
+    color: #1e3c72;
+}
+
+/* Responsive Design */
+
+/* Tablet: 768px - 1023px */
+@media (max-width: 1023px) {
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-hero p {
+        font-size: 1.1rem;
+    }
+
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .mission-card,
+    .vision-card {
+        padding: 30px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta-section p {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile: 480px - 767px */
+@media (max-width: 767px) {
+    .about-hero {
+        padding: 60px 15px;
+        margin-bottom: 40px;
+    }
+
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+
+    .about-hero p {
+        font-size: 1rem;
+    }
+
+    .mission-vision {
+        padding: 40px 15px;
+    }
+
+    .mission-card,
+    .vision-card {
+        padding: 25px;
+    }
+
+    .mission-card h2,
+    .vision-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .company-info {
+        padding: 40px 15px;
+    }
+
+    .company-info h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .info-content p {
+        text-align: left;
+        font-size: 0.95rem;
+    }
+
+    .products-overview {
+        padding: 40px 15px;
+    }
+
+    .products-overview h2 {
+        font-size: 1.8rem;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .product-item {
+        padding: 25px;
+    }
+
+    .product-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .why-choose-us {
+        padding: 40px 15px;
+    }
+
+    .why-choose-us h2 {
+        font-size: 1.8rem;
+        margin-bottom: 35px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .feature-card {
+        padding: 25px;
+    }
+
+    .leadership {
+        padding: 40px 15px;
+    }
+
+    .leadership h2 {
+        font-size: 1.8rem;
+        margin-bottom: 35px;
+    }
+
+    .cta-section {
+        padding: 60px 15px;
+    }
+
+    .cta-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .cta-section p {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+    }
+
+    .cta-buttons {
+        gap: 10px;
+    }
+
+    .cta-buttons .btn {
+        padding: 12px 30px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Small Phone: 375px - 479px */
+@media (max-width: 479px) {
+    .about-hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .about-hero p {
+        font-size: 0.9rem;
+    }
+
+    .mission-card h2,
+    .vision-card h2 {
+        font-size: 1.3rem;
+    }
+
+    .company-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .products-overview h2 {
+        font-size: 1.5rem;
+    }
+
+    .product-item h3 {
+        font-size: 1rem;
+    }
+
+    .product-item p {
+        font-size: 0.85rem;
+    }
+
+    .why-choose-us h2 {
+        font-size: 1.5rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1rem;
+    }
+
+    .feature-card p {
+        font-size: 0.85rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+    }
+}
+
+/* Extra Small: 320px - 374px */
+@media (max-width: 374px) {
+    .about-hero {
+        padding: 40px 10px;
+    }
+
+    .about-hero h1 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+
+    .about-hero p {
+        font-size: 0.85rem;
+    }
+
+    .mission-card,
+    .vision-card {
+        padding: 20px;
+    }
+
+    .company-info {
+        padding: 30px 10px;
+    }
+
+    .products-overview {
+        padding: 30px 10px;
+    }
+
+    .product-item {
+        padding: 20px;
+    }
+
+    .why-choose-us {
+        padding: 30px 10px;
+    }
+
+    .feature-card {
+        padding: 20px;
+    }
+
+    .cta-section {
+        padding: 40px 10px;
+    }
+
+    .cta-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .cta-section p {
+        font-size: 0.85rem;
+    }
+}
