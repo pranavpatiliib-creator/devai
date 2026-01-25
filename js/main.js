@@ -31,14 +31,11 @@ async function loadComponent(componentName, containerId) {
         }
         let html = await response.text();
 
-        // Adjust relative paths if we are in a subdirectory (basePath is present)
+        // Adjust relative paths based on current page location
         if (basePath) {
-            // Replace "../" paths with basePath (for subdirectory pages)
-            html = html.replace(/(src|href)="\.\.\/([^"]+)"/g, `$1="${basePath}$2"`);
-            // Replace "./" with basePath
-            html = html.replace(/(src|href)="\.\/([^"]+)"/g, `$1="${basePath}$2"`);
-            // Replace relative paths that don't start with ./, /, #, or http
-            html = html.replace(/(src|href)="(?!(http|#|\/|\.\.\/|\.\/))([^"]+)"/g, `$1="${basePath}$3"`);
+            // For pages in subdirectories, prepend basePath to relative paths
+            // This converts "images/file.png" to "../images/file.png" when needed
+            html = html.replace(/(src|href)="(?!http|#|\/|\.\.\/|\.\/|data:)([^"]+)"/g, `$1="${basePath}$2"`);
         }
 
         const element = document.getElementById(containerId);

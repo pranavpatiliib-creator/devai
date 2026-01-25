@@ -15,6 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
+    // Determine path adjustment for images based on current page location
+    const isInSubdirectory = window.location.pathname.includes('/categories/') ||
+        window.location.pathname.includes('/products/');
+    const imagePath = isInSubdirectory ? '../' : '';
+
     console.log('Loading', productSuppliersData.length, 'suppliers');
 
     productSuppliersData.forEach(supplier => {
@@ -35,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.innerHTML = `
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="${image}" alt="${name} Logo" loading="lazy" onerror="this.src='images/placeholder_logo.png'">
+                    <img src="${imagePath}${image}" alt="${name} Logo" loading="lazy">
                     <div class="flip-card-name">${name}</div>
                 </div>
                 <div class="flip-card-back">
