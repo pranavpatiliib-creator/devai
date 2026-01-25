@@ -1,6 +1,7 @@
 /* Main CSS file - imports all modules */
 
 /* Base styles: reset, variables, typography, global styles */
+@import "reset.css";
 @import "base.css";
 
 /* Layout styles: grid, flex, containers, spacing utilities */

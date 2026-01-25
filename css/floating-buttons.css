@@ -1,5 +1,15 @@
 /* Floating buttons styles */
 
+.floating-buttons-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 99;
+}
+
 .floating-btn {
     width: 60px;
     height: 60px;
@@ -12,10 +22,12 @@
     cursor: pointer;
     transition: all 0.3s;
     text-decoration: none;
+    border: none;
 }
 
 .floating-btn:hover {
     transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .whatsapp-btn {
@@ -23,7 +35,88 @@
     color: white;
 }
 
+.whatsapp-btn:hover {
+    background: #20BA58;
+}
+
 .call-btn {
     background: #003d82;
     color: white;
+}
+
+.call-btn:hover {
+    background: #002456;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .floating-buttons-container {
+        bottom: 20px;
+        right: 20px;
+        gap: 10px;
+    }
+
+    .floating-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+}
+
+@media (max-width: 576px) {
+    .floating-buttons-container {
+        bottom: 18px;
+        right: 18px;
+        gap: 8px;
+    }
+
+    .floating-btn {
+        width: 48px;
+        height: 48px;
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-buttons-container {
+        bottom: 15px;
+        right: 15px;
+        gap: 8px;
+    }
+
+    .floating-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media (max-width: 375px) {
+    .floating-buttons-container {
+        bottom: 12px;
+        right: 12px;
+        gap: 6px;
+    }
+
+    .floating-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .floating-buttons-container {
+        bottom: 10px;
+        right: 10px;
+        gap: 5px;
+    }
+
+    .floating-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
 }

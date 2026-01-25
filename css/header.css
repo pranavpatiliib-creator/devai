@@ -168,25 +168,50 @@ main {
 @media (max-width: 768px) {
 
     .header {
-        padding: 0.6rem 0;
+        padding: 0.4rem 0;
     }
 
     .nav {
-        padding: 0 1rem;
+        padding: 0 0.8rem;
         max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+        min-height: 60px;
     }
 
     .logo {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+        flex-shrink: 1;
+        min-width: 0;
+    }
+
+    .brand-center {
+        font-size: 1rem;
+        font-weight: 700;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex-shrink: 1;
     }
 
     .logo img {
-        height: 70px;
-        width: 70px;
+        height: 45px;
+        width: 45px;
+        flex-shrink: 0;
     }
 
     .hamburger {
         display: block;
+        flex-shrink: 0;
+        font-size: 1.8rem;
+        margin-left: auto;
+        line-height: 1;
     }
 
 

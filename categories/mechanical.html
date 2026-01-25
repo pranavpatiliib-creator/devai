@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore our Spare Parts & Accessories products - Devai Technologies">
-    <title>Spare Parts & Accessories - Devai Technologies</title>
+    <meta name="description" content="Explore our Mechanical & Power Transmission products - Devai Technologies">
+    <title>Mechanical & Transmission - Devai Technologies</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/products.css">
     <link rel="stylesheet" href="css/owner.css">
@@ -31,8 +31,9 @@
 
     <div class="products-hero">
         <div class="container">
-            <h1>Spare Parts & Accessories</h1>
-            <p>Explore our comprehensive range of spare parts and accessories</p>
+            <a href="products.html" class="back-link">← Back to All Products</a>
+            <h1>Mechanical & Transmission</h1>
+            <p>Explore our comprehensive range of mechanical and power transmission products</p>
         </div>
     </div>
 
@@ -46,26 +47,21 @@
     <div id="footer"></div>
 
     <!-- Scripts -->
-    <script src="js/products_data.js"></script>
-    <script src="js/products_grid.js"></script>
+    <script src="../js/products_data.js"></script>
+    <script src="../js/products_grid.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const sparesProducts = productsData.filter(p =>
-                p.category === 'Spare Parts & Accessories' ||
-                p.category === 'Accessories' ||
-                p.category === 'Cables' ||
-                p.category === 'Enclosures' ||
-                p.category === 'Enclosures, Wiring & Panel Accessories' ||
-                p.category === 'Machine Interface & Operator Control'
+            const mechanicalProducts = productsData.filter(p =>
+                p.category === 'Mechanical & Power Transmission' ||
+                p.category === 'Mechanical' ||
+                p.category === 'Motors'
             );
-            renderProductsGrid(sparesProducts, 'products-grid');
+            renderProductsGrid(mechanicalProducts, 'products-grid');
         });
     </script>
-
-    <div id="footer"></div>
-
-    <!-- Scripts -->
-    <script src="js/products_data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/hamburger.js"></script>
+    <script src="../js/preloader.js"></script>
     <script src="js/products_grid.js"></script>
     <script src="js/main.js"></script>
     <script src="js/hamburger.js"></script>
