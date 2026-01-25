@@ -1,58 +1,93 @@
-@media (min-width: 1024px) {
-    #products-grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    }
+/* =====================================================
+   PRODUCTS PAGE – ALIGNED WITH PRODUCT SUPPLIERS
+   ===================================================== */
+
+/* -------------------------
+   Page Wrapper
+-------------------------- */
+.products-page {
+    padding-top: 100px;
+    background-color: #f8f9fa;
+    min-height: 80vh;
 }
 
-
-/* Desktop */
-@media (min-width: 1024px) {
-    #products-grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    }
+/* -------------------------
+   Products Hero Section
+   (MATCHES Product Supplier Header)
+-------------------------- */
+.products-hero {
+    text-align: center;
+    padding: 4rem 2rem 2rem;
+    background: linear-gradient(135deg, #0d3b66 0%, #051626 100%);
+    color: white;
+    margin-bottom: 2rem;
 }
 
-/* ========================
-   Product Categories Section with Animations
-   ======================== */
-
-.product-categories {
-    padding: 2rem 5%;
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-}
-
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 2rem;
+.products-hero .container {
     max-width: 1200px;
     margin: 0 auto;
 }
 
+.products-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.products-hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* =====================================================
+   PRODUCT CATEGORIES (MATCH SUPPLIERS GRID)
+   ===================================================== */
+
+.product-categories {
+    padding: 2rem 0;
+    background: #f8f9fa;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 4rem;
+    padding: 2rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* -------------------------
+   Category Cards
+-------------------------- */
 .category-card {
     background: linear-gradient(135deg, #003d82 0%, #001f42 100%);
     color: white;
-    padding: 2rem 1.5rem;
+    padding: 2.5rem 2rem;
     border-radius: 12px;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 180px;
+    height: 200px;
     position: relative;
     overflow: hidden;
-    animation: cardFadeIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    animation: cardFadeIn 0.6s ease both;
 }
 
+/* Fade In Animation */
 @keyframes cardFadeIn {
     from {
         opacity: 0;
-        transform: translateY(30px) scale(0.9);
+        transform: translateY(30px) scale(0.95);
     }
 
     to {
@@ -61,18 +96,19 @@
     }
 }
 
+/* Shimmer Effect */
 .category-card::before {
     content: '';
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(255, 215, 0, 0.1), transparent);
-    animation: shimmer-move 3s infinite;
+    inset: -50%;
+    background: linear-gradient(45deg,
+            transparent,
+            rgba(255, 215, 0, 0.12),
+            transparent);
+    animation: shimmer 3s infinite;
 }
 
-@keyframes shimmer-move {
+@keyframes shimmer {
     0% {
         transform: translate(-100%, -100%);
     }
@@ -88,63 +124,40 @@
 }
 
 .category-card h3 {
-    font-size: 1.2rem;
-    margin: 0 0 1rem 0;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
     font-weight: 600;
     position: relative;
     z-index: 2;
-    transition: all 0.3s ease;
-}
-
-.category-card:hover h3 {
-    color: #ffd700;
 }
 
 .category-card span {
     font-size: 0.9rem;
     color: #ffd700;
-    font-weight: 500;
+    font-weight: 600;
     position: relative;
     z-index: 2;
 }
 
-/* Responsive for categories */
-@media (max-width: 767px) {
-    .card-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .category-card {
-        height: 160px;
-        padding: 1.5rem 1rem;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-    .card-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
-}
-
-/* ========================
-   Flip Card Styles
-   ======================== */
+/* =====================================================
+   PRODUCT FLIP CARDS (DETAIL PAGES)
+   ===================================================== */
 
 .products-section {
-    padding: 2rem 5%;
+    padding: 2rem 0;
     background: #f8f9fa;
 }
 
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
+    gap: 4rem;
+    padding: 2rem 5%;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
+/* Flip Card Container */
 .product-flip-card {
     background-color: transparent;
     perspective: 1200px;
@@ -157,7 +170,6 @@
     position: relative;
     width: 100%;
     height: 100%;
-    text-align: center;
     transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
     transform-style: preserve-3d;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -168,60 +180,37 @@
     transform: rotateY(180deg);
 }
 
+/* Front & Back */
 .product-flip-card-front,
 .product-flip-card-back {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
+    inset: 0;
     backface-visibility: hidden;
     border-radius: 12px;
     overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .product-flip-card-front {
-    background-color: #ffffff;
+    background: #ffffff;
     display: flex;
     flex-direction: column;
 }
 
 .product-flip-card-back {
-    background: linear-gradient(145deg, #001f42 0%, #003d82 100%);
+    background: linear-gradient(135deg, #0d3b66 0%, #1a5c96 100%);
     color: white;
     transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 2rem;
     text-align: center;
 }
 
-.category-tag {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: rgba(0, 61, 130, 0.8);
-    color: #ffd700;
-    padding: 0.4rem 0.8rem;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    z-index: 2;
-}
-
+/* Image Area */
 .image-wrapper {
     height: 200px;
-    width: 100%;
-    background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1.5rem;
-    position: relative;
     border-bottom: 2px solid #f0f2f5;
 }
 
@@ -229,19 +218,16 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
-    transition: transform 0.5s ease;
+    transition: transform 0.4s ease;
 }
 
 .product-flip-card:hover .image-wrapper img {
     transform: scale(1.05);
 }
 
+/* Product Info */
 .product-info-front {
     padding: 1.5rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     text-align: left;
 }
 
@@ -250,49 +236,27 @@
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: #001f42;
-    line-height: 1.3;
 }
 
 .product-supplier {
     font-size: 0.85rem;
-    color: #003d82;
     font-weight: 600;
-    margin-bottom: 1rem;
+    color: #003d82;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
 }
 
 .short-desc {
     font-size: 0.9rem;
     color: #555;
     line-height: 1.5;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 
-.flip-hint {
-    background: #f8f9fa;
-    color: #003d82;
-    padding: 0.8rem;
-    font-size: 0.8rem;
-    font-weight: 700;
-    border-top: 1px solid #eee;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
+/* Back Side */
 .product-flip-card-back h3 {
     font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
     color: #ffd700;
-}
-
-.back-content {
-    width: 100%;
+    margin-bottom: 1.5rem;
 }
 
 .full-desc {
@@ -308,26 +272,44 @@
     color: #001f42;
     padding: 0.9rem 2rem;
     border-radius: 6px;
-    text-decoration: none;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
 }
 
 .enquire-btn:hover {
     background: #ffffff;
-    color: #001f42;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
 }
 
-/* Responsive for flip cards */
-@media (max-width: 767px) {
+@media (min-width: 1280px) {
+
+    .card-grid,
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .products-hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .products-hero p {
+        font-size: 1.15rem;
+    }
+}
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .card-grid,
     .products-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 2rem;
+        padding: 1rem;
     }
 
     .product-flip-card {
@@ -337,50 +319,37 @@
     .image-wrapper {
         height: 160px;
     }
-}
 
-@media (min-width: 768px) and (max-width: 1023px) {
-    .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+    .products-hero h1 {
+        font-size: 2rem;
     }
 }
 
-/* ========================
-   Products Hero Section
-   ======================== */
-.products-hero {
-    background: linear-gradient(135deg, #003d82 0%, #001f42 100%);
-    color: white;
-    padding: 230px 5% 60px;
-    text-align: center;
+@media (min-width: 1280px) {
+
+    .card-grid,
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .products-hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .products-hero p {
+        font-size: 1.15rem;
+    }
 }
 
-.products-hero .container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
+@media (min-width: 1600px) {
 
-.products-hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #ffd700;
-}
+    .card-grid,
+    .products-grid {
+        max-width: 1600px;
+        gap: 4.5rem;
+    }
 
-.products-hero p {
-    font-size: 1.2rem;
-    color: #e0e0e0;
-}
-
-.back-link {
-    display: inline-block;
-    color: #ffd700;
-    text-decoration: none;
-    margin-bottom: 2rem;
-    font-weight: 600;
-    transition: transform 0.3s;
-}
-
-.back-link:hover {
-    transform: translateX(-5px);
+    .products-hero {
+        padding: 6rem 2rem 4rem;
+    }
 }
