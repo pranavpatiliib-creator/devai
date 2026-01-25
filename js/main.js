@@ -33,10 +33,12 @@ async function loadComponent(componentName, containerId) {
 
         // Adjust relative paths if we are in a subdirectory (basePath is present)
         if (basePath) {
+            // Replace "../" paths with basePath (for subdirectory pages)
+            html = html.replace(/(src|href)="\.\.\/([^"]+)"/g, `$1="${basePath}$2"`);
             // Replace "./" with basePath
             html = html.replace(/(src|href)="\.\/([^"]+)"/g, `$1="${basePath}$2"`);
             // Replace relative paths that don't start with ./, /, #, or http
-            html = html.replace(/(src|href)="(?!(http|#|\/|\.\.\/))([^"]+)"/g, `$1="${basePath}$3"`);
+            html = html.replace(/(src|href)="(?!(http|#|\/|\.\.\/|\.\/))([^"]+)"/g, `$1="${basePath}$3"`);
         }
 
         const element = document.getElementById(containerId);
@@ -55,6 +57,15 @@ async function loadComponent(componentName, containerId) {
 
 // Load all components
 async function loadAllComponents() {
+    // Calculate basePath based on current page location
+    const pathDepth = (window.location.pathname.match(/\//g) || []).length - 1;
+    const isInSubdirectory = window.location.pathname.includes('/categories/') ||
+        window.location.pathname.includes('/products/');
+    const basePath = isInSubdirectory ? '../' : '';
+
+    // Set basePath on body for component loader to use
+    document.body.dataset.basePath = basePath;
+
     let components = [
         { name: 'header', id: 'header' },
         { name: 'hero', id: 'hero' },

@@ -1,0 +1,594 @@
+/* ========================================
+   PREMIUM ANIMATION LIBRARY
+   Advanced scroll-based and micro-interactions
+   for premium tech/industrial brand feel
+   ======================================== */
+
+/* ========================================
+   ENTRANCE & REVEAL ANIMATIONS
+   ======================================== */
+
+/* Hero entrance with scale and opacity */
+@keyframes heroEnter {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Text reveal from bottom */
+@keyframes textRevealUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Text reveal from left (for RTL or side content) */
+@keyframes textRevealLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Text reveal from right */
+@keyframes textRevealRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Clip path reveal (modern, premium feel) */
+@keyframes revealClip {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/* Word reveal with individual character stagger */
+@keyframes wordReveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   SCROLL-TRIGGERED ANIMATIONS
+   ======================================== */
+
+/* Fade in when scrolled into view */
+@keyframes scrollFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Scale up when scrolled into view */
+@keyframes scrollScaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Subtle floating effect */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Card lift on scroll */
+@keyframes cardLift {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Image parallax scroll effect */
+@keyframes parallaxMove {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-100px);
+    }
+}
+
+/* ========================================
+   MICRO-INTERACTIONS & HOVER STATES
+   ======================================== */
+
+/* Button press effect */
+@keyframes buttonPress {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.98);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Smooth button hover scale */
+@keyframes buttonHoverScale {
+    from {
+        transform: scale(1) translateY(0);
+    }
+
+    to {
+        transform: scale(1.05) translateY(-3px);
+    }
+}
+
+/* Glow pulse effect */
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.5), 0 0 40px rgba(255, 215, 0, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(255, 215, 0, 0.8), 0 0 60px rgba(255, 215, 0, 0.5);
+    }
+}
+
+/* Shimmer/shine effect */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* Link underline animation */
+@keyframes lineReveal {
+    from {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+
+    to {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
+
+/* ========================================
+   STAGGER ANIMATIONS (for lists/grids)
+   ======================================== */
+
+/* Product card stagger */
+@keyframes staggerReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Checkbox reveal stagger */
+@keyframes checkReveal {
+    from {
+        opacity: 0;
+        transform: scale(0.5) rotateZ(-90deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotateZ(0deg);
+    }
+}
+
+/* ========================================
+   PAGE & SECTION TRANSITIONS
+   ======================================== */
+
+/* Smooth page fade in */
+@keyframes pageEnter {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Smooth page fade out */
+@keyframes pageExit {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* Section blur in effect */
+@keyframes blurIn {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+/* ========================================
+   LOADING & TRANSITIONS
+   ======================================== */
+
+/* Rotating loader */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Pulse effect */
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Smooth scale pulse */
+@keyframes scalePulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+}
+
+/* ========================================
+   UTILITY CLASSES FOR SCROLL ANIMATIONS
+   ======================================== */
+
+/* Base class for scroll-animated elements */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When element is in viewport */
+.scroll-animate.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delay utilities for multiple elements */
+.scroll-animate.delay-1 {
+    transition-delay: 0.1s;
+}
+
+.scroll-animate.delay-2 {
+    transition-delay: 0.2s;
+}
+
+.scroll-animate.delay-3 {
+    transition-delay: 0.3s;
+}
+
+.scroll-animate.delay-4 {
+    transition-delay: 0.4s;
+}
+
+.scroll-animate.delay-5 {
+    transition-delay: 0.5s;
+}
+
+/* Scale animation on scroll */
+.scroll-animate.scale {
+    transform: translateY(30px) scale(0.95);
+}
+
+.scroll-animate.scale.in-view {
+    transform: translateY(0) scale(1);
+}
+
+/* Blur animation on scroll */
+.scroll-animate.blur {
+    filter: blur(5px);
+}
+
+.scroll-animate.blur.in-view {
+    filter: blur(0);
+}
+
+/* ========================================
+   PARALLAX SCROLL EFFECT
+   ======================================== */
+
+.parallax-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax-element {
+    will-change: transform;
+}
+
+/* ========================================
+   FLOATING EFFECT (continuous) */
+.floating {
+    animation: float 3s ease-in-out infinite;
+}
+
+.floating.delay-1 {
+    animation-delay: 0s;
+}
+
+.floating.delay-2 {
+    animation-delay: 0.5s;
+}
+
+.floating.delay-3 {
+    animation-delay: 1s;
+}
+
+/* ========================================
+   GLOWING ELEMENTS
+   ======================================== */
+
+.glow-element {
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+.glow-element.fast {
+    animation-duration: 1s;
+}
+
+/* ========================================
+   TEXT REVEAL WITH CLIP PATH
+   ======================================== */
+
+.clip-reveal {
+    position: relative;
+}
+
+.clip-reveal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.2) 100%);
+    animation: shimmer 2s infinite;
+    animation-delay: 0.5s;
+}
+
+/* ========================================
+   CARD ELEVATION & DEPTH
+   ======================================== */
+
+.elevated-card {
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.elevated-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   SMOOTH TRANSITIONS
+   ======================================== */
+
+.smooth-transition {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.smooth-transition.fast {
+    transition-duration: 0.2s;
+}
+
+.smooth-transition.slow {
+    transition-duration: 0.8s;
+}
+
+/* ========================================
+   BORDER & UNDERLINE ANIMATIONS
+   ======================================== */
+
+.nav-underline {
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ffd700;
+    transition: width 0.3s ease;
+}
+
+.nav-underline:hover::after {
+    width: 100%;
+}
+
+/* ========================================
+   ICON ANIMATIONS
+   ======================================== */
+
+@keyframes iconBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.icon-bounce {
+    animation: iconBounce 0.6s ease-in-out;
+}
+
+/* Rotating icon */
+@keyframes iconRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.icon-rotate {
+    animation: iconRotate 2s linear infinite;
+}
+
+/* ========================================
+   ADVANCED HOVER EFFECTS
+   ======================================== */
+
+/* Gradient shift on hover */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-shift {
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease infinite;
+}
+
+/* ========================================
+   RESPONSIVE ANIMATION REDUCTIONS
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Reduced animations on mobile for better performance */
+@media (max-width: 768px) {
+    .scroll-animate {
+        transition-duration: 0.4s;
+    }
+
+    .elevated-card:hover {
+        transform: translateY(-4px);
+    }
+
+    @keyframes parallaxMove {
+        from {
+            transform: translateY(0px);
+        }
+
+        to {
+            transform: translateY(-50px);
+        }
+    }
+}

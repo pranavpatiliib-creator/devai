@@ -4,6 +4,9 @@
 @import "reset.css";
 @import "base.css";
 
+/* Premium animations and micro-interactions */
+@import "animations.css";
+
 /* Layout styles: grid, flex, containers, spacing utilities */
 @import "layout.css";
 
