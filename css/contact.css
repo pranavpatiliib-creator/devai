@@ -14,7 +14,7 @@
 }
 
 .contact-section {
-    padding: 80px 5%;
+    padding: 80px 5% 120px;
     background: #f8f9fa;
 }
 
@@ -181,7 +181,7 @@
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .social-links {
@@ -254,7 +254,7 @@
     }
 
     .contact-section {
-        padding: 50px 5%;
+        padding: 50px 5% 100px;
     }
 
     .contact-card {
@@ -318,7 +318,7 @@
     }
 
     .contact-section {
-        padding: 40px 5%;
+        padding: 40px 5% 90px;
     }
 
     .contact-card {
@@ -633,5 +633,35 @@
     .contact-section {
         padding-left: max(5%, env(safe-area-inset-left));
         padding-right: max(5%, env(safe-area-inset-right));
+        padding-bottom: 80px;
+    }
+
+    .map-wrapper {
+        min-height: 250px;
+        margin-bottom: 50px;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 375px) {
+    .contact-section {
+        padding: 25px 8px 80px;
+    }
+
+    .map-wrapper {
+        min-height: 230px;
+        margin-bottom: 45px;
+    }
+}
+
+/* Ultra Small Devices */
+@media (max-width: 320px) {
+    .contact-section {
+        padding: 20px 8px 75px;
+    }
+
+    .map-wrapper {
+        min-height: 200px;
+        margin-bottom: 40px;
     }
 }
