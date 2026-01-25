@@ -1,2 +1,0 @@
-- [x] Update mailto link in contact.html to include subject and body for auto-drafting email
-- [x] Update mailto link in footer.html to include subject and body for auto-drafting email

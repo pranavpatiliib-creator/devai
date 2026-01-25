@@ -112,6 +112,14 @@
     background: rgba(255, 215, 0, 0.1);
 }
 
+/* Active link styling */
+.nav-links a.active {
+    color: #ffd700;
+    background: rgba(255, 215, 0, 0.15);
+    font-weight: 600;
+    border-bottom: 3px solid #ffd700;
+}
+
 /* =========================
    HAMBURGER
    ========================= */

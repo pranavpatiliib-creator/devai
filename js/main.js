@@ -1,3 +1,26 @@
+// Get current page name
+function getCurrentPage() {
+    const pathname = window.location.pathname;
+    const page = pathname.split('/').pop() || 'index.html';
+    // Remove .html extension and return the page identifier
+    return page.replace('.html', '') || 'index';
+}
+
+// Set active nav link based on current page
+function setActiveNavLink() {
+    const currentPage = getCurrentPage();
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    navLinks.forEach(link => {
+        const dataPage = link.getAttribute('data-page');
+        link.classList.remove('active');
+
+        if (dataPage === currentPage) {
+            link.classList.add('active');
+        }
+    });
+}
+
 // Dynamic component loading
 async function loadComponent(componentName, containerId) {
     try {
@@ -19,6 +42,11 @@ async function loadComponent(componentName, containerId) {
         const element = document.getElementById(containerId);
         if (element) {
             element.innerHTML = html;
+
+            // If this is the header component, set active link after loading
+            if (componentName === 'header') {
+                setActiveNavLink();
+            }
         }
     } catch (error) {
         console.error(`Error loading component ${componentName}:`, error);
