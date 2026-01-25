@@ -106,42 +106,7 @@ function initializeScripts() {
     // Hamburger menu functionality is now handled by hamburger.js
 
     // Form submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-            e.preventDefault();
 
-            const formData = new FormData(this);
-            const data = {
-                name: formData.get('name'),
-                phone: formData.get('phone'),
-                email: formData.get('email'),
-                product: formData.get('product'),
-                message: formData.get('message')
-            };
-
-            fetch('/submit-quote', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-                .then(response => response.json())
-                .then(result => {
-                    if (result.success) {
-                        alert('Thank you for your inquiry! We will contact you soon.');
-                        this.reset();
-                    } else {
-                        alert('Error submitting form. Please try again.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('Error submitting form. Please try again.');
-                });
-        });
-    }
 
     // Smooth scrolling
     document.querySelectorAll('a[href^="#"], a[href*="#"]').forEach(anchor => {
