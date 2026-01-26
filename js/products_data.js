@@ -7,7 +7,7 @@ const productsData = [
         subCategory: "Air Circuit Breakers",
         shortDescription: "High-current circuit protection for industrial plants.",
         fullDescription: "Robust Air Circuit Breakers designed for the protection of electrical circuits in industrial and building low-voltage distribution systems. Features high breaking capacity and selective protection.",
-        image: "/devai/images/products/acb_air_circuit_breaker.png",
+        image: "../images/products/acb_air_circuit_breaker.png",
         datasheet: "#"
     },
     {
@@ -18,7 +18,7 @@ const productsData = [
         subCategory: "Moulded Case Circuit Breakers",
         shortDescription: "Reliable protection for distribution circuits.",
         fullDescription: "Molded Case Circuit Breakers provide protection against overloads and short circuits in electrical distribution systems. Available in various frame sizes and breaking capacities.",
-        image: "/devai/images/products/mccb_molded_case_circuit_breaker.png",
+        image: "../images/products/mccb_molded_case_circuit_breaker.png",
         datasheet: "#"
     },
     {
@@ -29,7 +29,7 @@ const productsData = [
         subCategory: "Modular Circuit Breakers",
         shortDescription: "Compact protection for final distribution.",
         fullDescription: "Standard MCBs for protection of cables and equipment against overload and short circuits. Ideal for domestic and commercial installations.",
-        image: "/devai/images/products/mcb_miniature_circuit_breaker.png",
+        image: "../images/products/mcb_miniature_circuit_breaker.png",
         datasheet: "#"
     },
     {
@@ -40,7 +40,7 @@ const productsData = [
         subCategory: "Power Contactors",
         shortDescription: "Heavy-duty switching for motors and loads.",
         fullDescription: "High-performance contactors for controlling electric motors, lighting, heating, and capacitor banks. proven reliability in harsh industrial environments.",
-        image: "/devai/images/products/electrical_contactor.png",
+        image: "../images/products/electrical_contactor.png",
         datasheet: "#"
     },
     {
@@ -51,7 +51,7 @@ const productsData = [
         subCategory: "Thermal Overload Relays",
         shortDescription: "Motor protection against overload and phase failure.",
         fullDescription: "Reliable thermal overload relays for direct mounting on contactors. Provides accurate protection for motors against thermal overload and phase loss.",
-        image: "/devai/images/products/thermal_overload_relay.png",
+        image: "../images/products/thermal_overload_relay.png",
         datasheet: "#"
     },
     {
@@ -62,7 +62,7 @@ const productsData = [
         subCategory: "Motor Protection Circuit Breakers",
         shortDescription: "Motor Protection Circuit Breaker.",
         fullDescription: "All-in-one motor protection solution combining short-circuit protection and overload protection in a single compact device.",
-        image: "/devai/images/products/mpcb_motor_protection_circuit_breaker.png",
+        image: "../images/products/mpcb_motor_protection_circuit_breaker.png",
         datasheet: "#"
     },
     {
@@ -73,7 +73,7 @@ const productsData = [
         subCategory: "Programmable Logic Controllers",
         shortDescription: "Programmable Logic Controller for industrial automation.",
         fullDescription: "Advanced PLCs for complex machine control and process automation. Features modular design, high processing speed, and multiple communication protocols.",
-        image: "/devai/images/products/plc_automation_controller.png",
+        image: "../images/products/plc_automation_controller.png",
         datasheet: "#"
     },
     {
@@ -84,7 +84,7 @@ const productsData = [
         subCategory: "Programmable Logic Controllers",
         shortDescription: "Human Machine Interface for system monitoring.",
         fullDescription: "High-resolution HMI touch screens for intuitive machine operation and monitoring. Supports data logging, remote access, and various industrial protocols.",
-        image: "/devai/images/products/hmi_touch_panel_industrial.png",
+        image: "../images/products/hmi_touch_panel_industrial.png",
         datasheet: "#"
     },
     {
@@ -95,7 +95,7 @@ const productsData = [
         subCategory: "Variable Frequency Drive Systems",
         shortDescription: "Variable Frequency Drive for motor speed control.",
         fullDescription: "Energy-efficient AC drives for precise control of motor speed and torque. Ideal for pumps, fans, conveyors, and general automation applications.",
-        image: "/devai/images/products/vfd_drive_industrial.png",
+        image: "../images/products/vfd_drive_industrial.png",
         datasheet: "#"
     },
     {
@@ -106,7 +106,7 @@ const productsData = [
         subCategory: "Switch Mode Power Supplies",
         shortDescription: "Switched Mode Power Supply 24V DC.",
         fullDescription: "Reliable DIN-rail mounted power supplies for industrial control cabinets. Features high efficiency, wide input voltage range, and short-circuit protection.",
-        image: "/devai/images/products/smps_power_supply_industrial.png",
+        image: "../images/products/smps_power_supply_industrial.png",
         datasheet: "#"
     },
     {
@@ -116,7 +116,7 @@ const productsData = [
         category: "Sensors",
         shortDescription: "Non-contact detection of metal objects.",
         fullDescription: "Rugged inductive sensors for position detection in automation. IP67 rated for harsh environments, available in various sensing ranges and outputs.",
-        image: "/devai/images/products/inductive_proximity_sensor.png",
+        image: "../images/products/inductive_proximity_sensor.png",
         datasheet: "#"
     },
     {
@@ -126,7 +126,7 @@ const productsData = [
         category: "Sensors",
         shortDescription: "Optical detection for automation.",
         fullDescription: "Versatile photoelectric sensors for detecting objects regardless of material. Modes include through-beam, retro-reflective, and diffuse.",
-        image: "/devai/images/products/photoelectric_sensor_industrial.png",
+        image: "../images/products/photoelectric_sensor_industrial.png",
         datasheet: "#"
     },
     {
@@ -136,7 +136,7 @@ const productsData = [
         category: "Motors",
         shortDescription: "Three-phase induction motor.",
         fullDescription: "High-efficiency IE2/IE3 induction motors for continuous industrial duty. Suitable for pumps, compressors, fans, and conveyor systems.",
-        image: "/devai/images/products/industrial_electric_motor.png",
+        image: "../images/products/industrial_electric_motor.png",
         datasheet: "#"
     },
     {
@@ -146,7 +146,7 @@ const productsData = [
         category: "Motors",
         shortDescription: "Heavy-duty transmission gearbox.",
         fullDescription: "Robust worm and helical gearboxes for torque multiplication and speed reduction. Designed for durability and smooth power transmission.",
-        image: "/devai/images/products/industrial_gearbox.png",
+        image: "../images/products/industrial_gearbox.png",
         datasheet: "#"
     },
     {
@@ -156,7 +156,7 @@ const productsData = [
         category: "Cables",
         shortDescription: "XLPE insulated armoured cable.",
         fullDescription: "Heavy-duty armoured aluminum/copper cables for underground power distribution. Resistant to mechanical stress and environmental factors.",
-        image: "/devai/images/products/armoured_electrical_cable.png",
+        image: "../images/products/armoured_electrical_cable.png",
         datasheet: "#"
     },
     {
@@ -166,7 +166,7 @@ const productsData = [
         category: "Accessories",
         shortDescription: "Double compression brass gland.",
         fullDescription: "Weatherproof double compression cable glands for secure cable entry into panels and enclosures. IP66 rated for outdoor use.",
-        image: "/devai/images/products/brass_cable_gland.png",
+        image: "../images/products/brass_cable_gland.png",
         datasheet: "#"
     },
     {
@@ -176,7 +176,7 @@ const productsData = [
         category: "Panels",
         shortDescription: "Low Tension Power Distribution Panel.",
         fullDescription: "Custom-built electrical command and control panels. Powder-coated rugged enclosures with high-quality busbars and switchgear layout.",
-        image: "/devai/images/products/lt_control_panel.png",
+        image: "../images/products/lt_control_panel.png",
         datasheet: "#"
     },
     {
@@ -186,7 +186,7 @@ const productsData = [
         category: "Lighting",
         shortDescription: "High-intensity outdoor industrial lighting.",
         fullDescription: "Energy-saving LED floodlights for industrial yards, factories, and security lighting. IP65 waterproof housing with high lumen output.",
-        image: "/devai/images/products/led_flood_light.png",
+        image: "../images/products/led_flood_light.png",
         datasheet: "#"
     },
     {
@@ -196,7 +196,7 @@ const productsData = [
         category: "Tools",
         shortDescription: "True-RMS Industrial Multimeter.",
         fullDescription: "Professional-grade digital multimeter for measuring voltage, current, resistance, and continuity. Essential for troubleshooting electrical systems.",
-        image: "/devai/images/products/digital_multimeter_industrial.png",
+        image: "../images/products/digital_multimeter_industrial.png",
         datasheet: "#"
     },
     {
@@ -206,7 +206,7 @@ const productsData = [
         category: "Tools",
         shortDescription: "Heavy-duty drill and grinder.",
         fullDescription: "Professional cordless and corded power tools for construction and maintenance. Ergonomic design with high durability.",
-        image: "/devai/images/products/industrial_power_tools.png",
+        image: "../images/products/industrial_power_tools.png",
         datasheet: "#"
     },
     {
@@ -216,7 +216,7 @@ const productsData = [
         category: "Safety",
         shortDescription: "Door safety switch for machine guarding.",
         fullDescription: "Safety interlock switches with solenoid locking. Prevents machine operation when guard doors are open, ensuring operator safety.",
-        image: "/devai/images/products/door_safety_interlock_switch.png",
+        image: "../images/products/door_safety_interlock_switch.png",
         datasheet: "#"
     },
     {
@@ -226,7 +226,7 @@ const productsData = [
         category: "Testing",
         shortDescription: "Infrared camera for hotspot detection.",
         fullDescription: "Handheld thermal imager for electrical inspections. Quickly identify overheating components, loose connections, and load imbalances.",
-        image: "/devai/images/products/thermal_imaging_camera_industrial.png",
+        image: "../images/products/thermal_imaging_camera_industrial.png",
         datasheet: "#"
     },
     {
@@ -236,7 +236,7 @@ const productsData = [
         category: "Enclosures",
         shortDescription: "Weatherproof IP65 Junction Box.",
         fullDescription: "Impact-resistant ABS/Polycarbonate enclosures for electrical junctions. UV stabilized and dustproof, suitable for outdoor installation.",
-        image: "/devai/images/products/abs_electrical_enclosure.png",
+        image: "../images/products/abs_electrical_enclosure.png",
         datasheet: "#"
     },
     {
@@ -246,7 +246,7 @@ const productsData = [
         category: "Mechanical",
         shortDescription: "Ball and Roller Bearings.",
         fullDescription: "High-precision ball bearings for rotating machinery. Reduced friction and high load-carrying capacity for long service life.",
-        image: "/devai/images/products/industrial_bearing.png",
+        image: "../images/products/industrial_bearing.png",
         datasheet: "#"
     },
     {
@@ -256,7 +256,7 @@ const productsData = [
         category: "Testing",
         shortDescription: "AC/DC current measurement tool.",
         fullDescription: "Digital clamp meter for measuring AC/DC current, voltage, and resistance without breaking the circuit. Essential for electrical troubleshooting.",
-        image: "/devai/images/products/clamp_meter_electrical.png",
+        image: "../images/products/clamp_meter_electrical.png",
         datasheet: "#"
     },
     {
@@ -266,7 +266,7 @@ const productsData = [
         category: "Lighting",
         shortDescription: "LED lighting for CNC machines.",
         fullDescription: "High-brightness LED lights designed for illuminating CNC machine work areas, providing clear visibility for precision operations.",
-        image: "/devai/images/products/cnc_machine_light.png",
+        image: "../images/products/cnc_machine_light.png",
         datasheet: "#"
     },
     {
@@ -276,7 +276,7 @@ const productsData = [
         category: "Controlgear",
         shortDescription: "Electromechanical relay for control circuits.",
         fullDescription: "Reliable control relays for switching low-power signals in industrial control systems. Features multiple contacts and long service life.",
-        image: "/devai/images/products/control_relay_industrial.png",
+        image: "../images/products/control_relay_industrial.png",
         datasheet: "#"
     },
     {
@@ -286,7 +286,7 @@ const productsData = [
         category: "Power Supply",
         shortDescription: "24V DC power supply for DIN rail mounting.",
         fullDescription: "Compact DIN-rail mounted power supplies for industrial applications, providing stable 24V DC output with overload protection.",
-        image: "/devai/images/products/din_rail_power_supply.png",
+        image: "../images/products/din_rail_power_supply.png",
         datasheet: "#"
     },
     {
@@ -296,7 +296,7 @@ const productsData = [
         category: "Controlgear",
         shortDescription: "Heavy-duty contactor for industrial use.",
         fullDescription: "Robust contactors for controlling high-power electrical loads in industrial environments. Features arc suppression and high durability.",
-        image: "/devai/images/products/industrial_contactor.png",
+        image: "../images/products/industrial_contactor.png",
         datasheet: "#"
     },
     {
@@ -306,7 +306,7 @@ const productsData = [
         category: "Automation",
         shortDescription: "Managed Ethernet switch for industrial networks.",
         fullDescription: "Rugged Ethernet switches for industrial automation networks, supporting Gigabit speeds and redundant power inputs.",
-        image: "/devai/images/products/industrial_ethernet_switch.png",
+        image: "../images/products/industrial_ethernet_switch.png",
         datasheet: "#"
     },
     {
@@ -316,7 +316,7 @@ const productsData = [
         category: "Accessories",
         shortDescription: "Heavy-duty power connector.",
         fullDescription: "IP67 rated power connectors for reliable electrical connections in industrial applications.",
-        image: "/devai/images/products/industrial_power_connector.png",
+        image: "../images/products/industrial_power_connector.png",
         datasheet: "#"
     },
     {
@@ -326,7 +326,7 @@ const productsData = [
         category: "Power Supply",
         shortDescription: "Uninterruptible Power Supply for industrial equipment.",
         fullDescription: "Online UPS systems providing backup power and surge protection for critical industrial loads.",
-        image: "/devai/images/products/industrial_ups_system.png",
+        image: "../images/products/industrial_ups_system.png",
         datasheet: "#"
     },
     {
@@ -336,7 +336,7 @@ const productsData = [
         category: "Lighting",
         shortDescription: "High-intensity LED for warehouses.",
         fullDescription: "Energy-efficient LED high bay lights for illuminating large industrial spaces like warehouses and factories.",
-        image: "/devai/images/products/led_high_bay_light.png",
+        image: "../images/products/led_high_bay_light.png",
         datasheet: "#"
     },
     {
@@ -346,7 +346,7 @@ const productsData = [
         category: "Lighting",
         shortDescription: "Outdoor LED street lighting.",
         fullDescription: "Solar-powered or grid-connected LED street lights for urban and industrial road lighting.",
-        image: "/devai/images/products/led_street_light.png",
+        image: "../images/products/led_street_light.png",
         datasheet: "#"
     },
     {
@@ -356,7 +356,7 @@ const productsData = [
         category: "Sensors",
         shortDescription: "Position sensing switch.",
         fullDescription: "Mechanical limit switches for detecting the presence or position of objects in automation systems.",
-        image: "/devai/images/products/limit_switch_industrial.png",
+        image: "../images/products/limit_switch_industrial.png",
         datasheet: "#"
     },
     {
@@ -366,7 +366,7 @@ const productsData = [
         category: "Safety",
         shortDescription: "Safety switch for machine guarding.",
         fullDescription: "Non-contact safety switches for monitoring guard doors and ensuring safe machine operation.",
-        image: "/devai/images/products/machine_safety_switch.png",
+        image: "../images/products/machine_safety_switch.png",
         datasheet: "#"
     },
     {
@@ -376,7 +376,7 @@ const productsData = [
         category: "Switchgear",
         shortDescription: "Miniature circuit breaker switch.",
         fullDescription: "Compact MCBs for branch circuit protection in electrical distribution systems.",
-        image: "/devai/images/products/mcb_electrical_switch.png",
+        image: "../images/products/mcb_electrical_switch.png",
         datasheet: "#"
     },
     {
@@ -386,7 +386,7 @@ const productsData = [
         category: "Switchgear",
         shortDescription: "Molded case circuit breaker for switchgear.",
         fullDescription: "High-capacity MCCBs for main and feeder circuit protection in switchgear assemblies.",
-        image: "/devai/images/products/mccb_electrical_switchgear.png",
+        image: "../images/products/mccb_electrical_switchgear.png",
         datasheet: "#"
     },
     {
@@ -396,7 +396,7 @@ const productsData = [
         category: "Tools",
         shortDescription: "Air-powered industrial tools.",
         fullDescription: "Pneumatic drills, wrenches, and grinders for heavy-duty industrial applications.",
-        image: "/devai/images/products/pneumatic_tools_industrial.png",
+        image: "../images/products/pneumatic_tools_industrial.png",
         datasheet: "#"
     },
     {
@@ -406,7 +406,7 @@ const productsData = [
         category: "Controlgear",
         shortDescription: "High-power switching relay.",
         fullDescription: "Electromechanical power relays for controlling high-current loads in industrial systems.",
-        image: "/devai/images/products/power_relay_electrical.png",
+        image: "../images/products/power_relay_electrical.png",
         datasheet: "#"
     },
     {
@@ -416,7 +416,7 @@ const productsData = [
         category: "Sensors",
         shortDescription: "Resistance Temperature Detector.",
         fullDescription: "Accurate RTD sensors for measuring temperature in industrial processes, with high stability and linearity.",
-        image: "/devai/images/products/rtd_temperature_sensor.png",
+        image: "../images/products/rtd_temperature_sensor.png",
         datasheet: "#"
     },
     {
@@ -426,7 +426,7 @@ const productsData = [
         category: "Safety",
         shortDescription: "Relay for safety circuits.",
         fullDescription: "Safety relays for monitoring emergency stop circuits and ensuring fail-safe operation.",
-        image: "/devai/images/products/safety_relay.png",
+        image: "../images/products/safety_relay.png",
         datasheet: "#"
     },
     {
@@ -436,7 +436,7 @@ const productsData = [
         category: "Switchgear",
         shortDescription: "Switch fuse unit for motor circuits.",
         fullDescription: "Combination switch and fuse units for protection and isolation of motor circuits.",
-        image: "/devai/images/products/sfu_switch_fuse_unit.png",
+        image: "../images/products/sfu_switch_fuse_unit.png",
         datasheet: "#"
     },
     {
@@ -446,7 +446,7 @@ const productsData = [
         category: "Mechanical",
         shortDescription: "Industrial V-belt for power transmission.",
         fullDescription: "High-strength V-belts for efficient power transmission in industrial machinery.",
-        image: "/devai/images/products/v_belt_industrial.png",
+        image: "../images/products/v_belt_industrial.png",
         datasheet: "#"
     },
     {
@@ -456,7 +456,7 @@ const productsData = [
         category: "Lighting",
         shortDescription: "LED light for Vertical Machining Centers.",
         fullDescription: "Specialized LED lighting for VMC machines, providing bright illumination for machining operations.",
-        image: "/devai/images/products/vmc_machine_light.png",
+        image: "../images/products/vmc_machine_light.png",
         datasheet: "#"
     },
     {
@@ -467,7 +467,7 @@ const productsData = [
         subCategory: "Programmable Logic Controllers",
         shortDescription: "Modular I/O for distributed control systems.",
         fullDescription: "Distributed I/O modules for extending PLC capabilities in remote locations. Supports various communication protocols and provides reliable signal processing.",
-        image: "/devai/images/products/distributed-io.png",
+        image: "../images/products/distributed-io.png",
         datasheet: "#"
     },
     {
@@ -478,7 +478,7 @@ const productsData = [
         subCategory: "Variable Frequency Drive Systems",
         shortDescription: "Smooth motor starting and stopping.",
         fullDescription: "Soft starters provide controlled acceleration and deceleration of electric motors, reducing mechanical stress and electrical disturbances.",
-        image: "/devai/images/products/soft-starter.png",
+        image: "../images/products/soft-starter.png",
         datasheet: "#"
     },
     {
@@ -489,7 +489,7 @@ const productsData = [
         subCategory: "Pressure Switches & Transducers",
         shortDescription: "Pressure monitoring and control.",
         fullDescription: "Pressure switches and transducers for monitoring fluid pressure in industrial systems. Available in various pressure ranges and electrical outputs.",
-        image: "/devai/images/products/pressure-switch.png",
+        image: "../images/products/pressure-switch.png",
         datasheet: "#"
     },
     {
@@ -500,7 +500,7 @@ const productsData = [
         subCategory: "Presence Detectors",
         shortDescription: "Detection of objects in automation.",
         fullDescription: "Presence detectors for reliable object detection in industrial automation applications. IP67 rated for harsh environments.",
-        image: "/devai/images/products/presence-detector.png",
+        image: "../images/products/presence-detector.png",
         datasheet: "#"
     },
     {
@@ -511,7 +511,7 @@ const productsData = [
         subCategory: "Coded Magnetic Switches",
         shortDescription: "Safety magnetic switch with coding.",
         fullDescription: "Coded magnetic safety switches for machine guarding. Provides high safety levels with unique coding to prevent tampering.",
-        image: "/devai/images/products/coded-magnetic-switch.png",
+        image: "../images/products/coded-magnetic-switch.png",
         datasheet: "#"
     },
     {
@@ -522,7 +522,7 @@ const productsData = [
         subCategory: "Switch Fuse Units and Isolators",
         shortDescription: "Combined switching and protection device.",
         fullDescription: "Switch fuse units provide manual switching and fuse protection for electrical circuits. Used for motor control and distribution applications.",
-        image: "/devai/images/products/sfu_switch_fuse_unit.png",
+        image: "../images/products/sfu_switch_fuse_unit.png",
         datasheet: "#"
     },
     {
@@ -533,7 +533,7 @@ const productsData = [
         subCategory: "Auto Source Changeover Systems",
         shortDescription: "Automatic switching between power sources.",
         fullDescription: "Automatic transfer switches for seamless switching between main and backup power sources. Ensures uninterrupted power supply.",
-        image: "/devai/images/products/auto-changeover-system.png",
+        image: "../images/products/auto-changeover-system.png",
         datasheet: "#"
     },
     {
@@ -544,7 +544,7 @@ const productsData = [
         subCategory: "Surge Arresters",
         shortDescription: "Protection against voltage surges.",
         fullDescription: "Surge arresters protect electrical equipment from overvoltage transients caused by lightning or switching operations.",
-        image: "/devai/images/products/surge-arrester.png",
+        image: "../images/products/surge-arrester.png",
         datasheet: "#"
     },
     {
@@ -555,7 +555,7 @@ const productsData = [
         subCategory: "Time Switches / Light Sensitive Switches",
         shortDescription: "Programmable timer for electrical circuits.",
         fullDescription: "Digital time switches for automated control of lighting, heating, and other electrical loads based on time schedules.",
-        image: "/devai/images/products/time-switch.png",
+        image: "../images/products/time-switch.png",
         datasheet: "#"
     },
     {
@@ -566,7 +566,7 @@ const productsData = [
         subCategory: "Electronic Over Current Relays",
         shortDescription: "Advanced overcurrent protection.",
         fullDescription: "Electronic overcurrent relays provide precise protection against overload and short circuit conditions in electrical systems.",
-        image: "/devai/images/products/electronic-overcurrent-relay.png",
+        image: "../images/products/electronic-overcurrent-relay.png",
         datasheet: "#"
     },
     {
@@ -577,7 +577,7 @@ const productsData = [
         subCategory: "Power Meters and Analyzers",
         shortDescription: "Electrical power measurement and monitoring.",
         fullDescription: "Digital power meters for measuring electrical parameters like voltage, current, power, and energy consumption.",
-        image: "/devai/images/products/power-meter.png",
+        image: "../images/products/power-meter.png",
         datasheet: "#"
     },
     {
@@ -588,7 +588,7 @@ const productsData = [
         subCategory: "Power Quality Analyzer",
         shortDescription: "Analysis of electrical power quality.",
         fullDescription: "Portable power quality analyzers for monitoring harmonics, transients, and other power quality parameters.",
-        image: "/devai/images/products/power-quality-analyzer.png",
+        image: "../images/products/power-quality-analyzer.png",
         datasheet: "#"
     },
     {
@@ -599,7 +599,7 @@ const productsData = [
         subCategory: "PF Improvement Capacitor",
         shortDescription: "Power factor correction capacitor.",
         fullDescription: "Power factor improvement capacitors for enhancing electrical system efficiency and reducing energy costs.",
-        image: "/devai/images/products/pf-capacitor.png",
+        image: "../images/products/pf-capacitor.png",
         datasheet: "#"
     },
     {
@@ -610,7 +610,7 @@ const productsData = [
         subCategory: "Tower Light",
         shortDescription: "Multi-color signal tower.",
         fullDescription: "LED signal towers for visual indication of machine status, alarms, and process conditions in industrial environments.",
-        image: "/devai/images/products/tower-light.png",
+        image: "../images/products/tower-light.png",
         datasheet: "#"
     },
     {
@@ -621,7 +621,7 @@ const productsData = [
         subCategory: "Warning / Revolving Light",
         shortDescription: "Rotating warning beacon.",
         fullDescription: "Revolving warning lights for alerting personnel to hazardous conditions or equipment status.",
-        image: "/devai/images/products/warning-light.png",
+        image: "../images/products/warning-light.png",
         datasheet: "#"
     },
     {
@@ -632,7 +632,7 @@ const productsData = [
         subCategory: "Siren / Buzzer",
         shortDescription: "Audible alarm device.",
         fullDescription: "Industrial sirens and buzzers for audible signaling in noisy industrial environments.",
-        image: "/devai/images/products/siren-buzzer.png",
+        image: "../images/products/siren-buzzer.png",
         datasheet: "#"
     },
     {
@@ -643,7 +643,7 @@ const productsData = [
         subCategory: "Push Buttons, Switches, Pilot Lights",
         shortDescription: "Manual control interface.",
         fullDescription: "Industrial push buttons and switches for operator control of machinery and processes.",
-        image: "/devai/images/products/push-button.png",
+        image: "../images/products/push-button.png",
         datasheet: "#"
     },
     {
@@ -654,7 +654,7 @@ const productsData = [
         subCategory: "Control Stations",
         shortDescription: "Operator control panel.",
         fullDescription: "Pre-assembled control stations with push buttons, selectors, and indicators for machine control.",
-        image: "/devai/images/products/control-station.png",
+        image: "../images/products/control-station.png",
         datasheet: "#"
     },
     {
@@ -665,7 +665,7 @@ const productsData = [
         subCategory: "Pendant Stations",
         shortDescription: "Portable control pendant.",
         fullDescription: "Pendant control stations for crane and hoist operation, providing ergonomic control interfaces.",
-        image: "/devai/images/products/pendant-station.png",
+        image: "../images/products/pendant-station.png",
         datasheet: "#"
     },
     {
@@ -676,7 +676,7 @@ const productsData = [
         subCategory: "Joystick Controllers",
         shortDescription: "Multi-axis control device.",
         fullDescription: "Industrial joysticks for precise control of machinery movement in multiple axes.",
-        image: "/devai/images/products/joystick-controller.png",
+        image: "../images/products/joystick-controller.png",
         datasheet: "#"
     },
     {
@@ -687,7 +687,7 @@ const productsData = [
         subCategory: "Industrial Plug and Socket",
         shortDescription: "Heavy-duty electrical connector.",
         fullDescription: "Industrial plugs and sockets for safe and reliable power connections in harsh environments.",
-        image: "/devai/images/products/industrial_electrical_switch_socket.png",
+        image: "../images/products/industrial_electrical_switch_socket.png",
         datasheet: "#"
     },
     {
@@ -698,7 +698,7 @@ const productsData = [
         subCategory: "Plug & Socket with Enclosure",
         shortDescription: "Weatherproof plug and socket assembly.",
         fullDescription: "Enclosed plug and socket combinations for outdoor and industrial applications.",
-        image: "/devai/images/products/plug-socket-enclosure.png",
+        image: "../images/products/plug-socket-enclosure.png",
         datasheet: "#"
     },
     {
@@ -709,7 +709,7 @@ const productsData = [
         subCategory: "Cable Drums",
         shortDescription: "Cable storage and dispensing.",
         fullDescription: "Cable drums for safe storage and controlled dispensing of electrical cables.",
-        image: "/devai/images/products/cable-drum.png",
+        image: "../images/products/cable-drum.png",
         datasheet: "#"
     },
     {
@@ -720,7 +720,7 @@ const productsData = [
         subCategory: "PVC Channel & MCB Channel",
         shortDescription: "Cable management channel.",
         fullDescription: "PVC channels and MCB channels for organizing and protecting electrical wiring.",
-        image: "/devai/images/products/din_rail_electrical.png",
+        image: "../images/products/din_rail_electrical.png",
         datasheet: "#"
     },
     {
@@ -731,7 +731,7 @@ const productsData = [
         subCategory: "Heavy Duty Connectors",
         shortDescription: "Rugged electrical connector.",
         fullDescription: "Heavy-duty connectors for reliable power and signal connections in industrial environments.",
-        image: "/devai/images/products/industrial_power_connector.png",
+        image: "../images/products/industrial_power_connector.png",
         datasheet: "#"
     },
     {
@@ -742,7 +742,7 @@ const productsData = [
         subCategory: "Empty Enclosures",
         shortDescription: "Electrical enclosure housing.",
         fullDescription: "Empty electrical enclosures for housing control equipment and protecting against environmental factors.",
-        image: "/devai/images/products/empty-enclosure.png",
+        image: "../images/products/empty-enclosure.png",
         datasheet: "#"
     },
     {
@@ -753,7 +753,7 @@ const productsData = [
         subCategory: "Junction Box IP65",
         shortDescription: "Weatherproof junction box.",
         fullDescription: "IP65 rated junction boxes for protecting electrical connections in outdoor and wet environments.",
-        image: "/devai/images/products/abs_electrical_enclosure.png",
+        image: "../images/products/abs_electrical_enclosure.png",
         datasheet: "#"
     },
     {
@@ -764,7 +764,7 @@ const productsData = [
         subCategory: "Cooling Fan",
         shortDescription: "Enclosure ventilation fan.",
         fullDescription: "Cooling fans for maintaining optimal temperatures inside electrical enclosures.",
-        image: "/devai/images/products/cooling-fan.png",
+        image: "../images/products/cooling-fan.png",
         datasheet: "#"
     },
     {
@@ -775,7 +775,7 @@ const productsData = [
         subCategory: "Fan Filter",
         shortDescription: "Filtered ventilation unit.",
         fullDescription: "Fan filter units for filtered air circulation in electrical enclosures.",
-        image: "/devai/images/products/fan-filter.png",
+        image: "../images/products/fan-filter.png",
         datasheet: "#"
     },
     {
@@ -786,7 +786,7 @@ const productsData = [
         subCategory: "Heat Shrink",
         shortDescription: "Cable insulation tubing.",
         fullDescription: "Heat shrink tubing for electrical insulation and mechanical protection of cables and connections.",
-        image: "/devai/images/products/heat-shrink.png",
+        image: "../images/products/heat-shrink.png",
         datasheet: "#"
     },
     {
@@ -797,7 +797,7 @@ const productsData = [
         subCategory: "Spiral",
         shortDescription: "Cable bundling spiral wrap.",
         fullDescription: "Spiral wrapping for organizing and protecting cable bundles.",
-        image: "/devai/images/products/spiral-wrapping.png",
+        image: "../images/products/spiral-wrapping.png",
         datasheet: "#"
     },
     {
@@ -808,7 +808,7 @@ const productsData = [
         subCategory: "Safety Products",
         shortDescription: "Safety position switch.",
         fullDescription: "Safety limit switches for monitoring guard positions and ensuring safe machine operation.",
-        image: "/devai/images/products/limit_switch_industrial.png",
+        image: "../images/products/limit_switch_industrial.png",
         datasheet: "#"
     },
     {
@@ -819,7 +819,7 @@ const productsData = [
         subCategory: "Safety Products",
         shortDescription: "Hands-free control switch.",
         fullDescription: "Foot-operated switches for hands-free control of machinery and processes.",
-        image: "/devai/images/products/foot-switch.png",
+        image: "../images/products/foot-switch.png",
         datasheet: "#"
     },
     {
@@ -830,7 +830,7 @@ const productsData = [
         subCategory: "Safety Products",
         shortDescription: "Emergency stop pull cord.",
         fullDescription: "Pull cord switches for emergency stopping of conveyor systems and machinery.",
-        image: "/devai/images/products/pull-cord-switch.png",
+        image: "../images/products/pull-cord-switch.png",
         datasheet: "#"
     },
     {
@@ -841,7 +841,7 @@ const productsData = [
         subCategory: "Safety Products",
         shortDescription: "Safety guard monitoring switch.",
         fullDescription: "Safety switches for monitoring the position of protective guards on machinery.",
-        image: "/devai/images/products/guard-protection-switch.png",
+        image: "../images/products/guard-protection-switch.png",
         datasheet: "#"
     },
     {
@@ -852,7 +852,7 @@ const productsData = [
         subCategory: "Test & Measurement System",
         shortDescription: "Insulation resistance measurement.",
         fullDescription: "Analog insulation testers for measuring insulation resistance in electrical systems.",
-        image: "/devai/images/products/analog-insulation-tester.png",
+        image: "../images/products/analog-insulation-tester.png",
         datasheet: "#"
     },
     {
@@ -863,7 +863,7 @@ const productsData = [
         subCategory: "Test & Measurement System",
         shortDescription: "Digital insulation resistance tester.",
         fullDescription: "Digital insulation testers with advanced features for electrical safety testing.",
-        image: "/devai/images/products/digital-insulation-tester.png",
+        image: "../images/products/digital-insulation-tester.png",
         datasheet: "#"
     },
     {
@@ -874,7 +874,7 @@ const productsData = [
         subCategory: "Test & Measurement System",
         shortDescription: "High voltage insulation testing.",
         fullDescription: "High voltage insulation testers for testing insulation integrity in high-voltage systems.",
-        image: "/devai/images/products/high-voltage-insulation-tester.png",
+        image: "../images/products/high-voltage-insulation-tester.png",
         datasheet: "#"
     },
     {
@@ -885,7 +885,7 @@ const productsData = [
         subCategory: "Test & Measurement System",
         shortDescription: "Automated insulation testing system.",
         fullDescription: "Automatic insulation testers with test stands for high-volume testing applications.",
-        image: "/devai/images/products/automatic-insulation-tester.png",
+        image: "../images/products/automatic-insulation-tester.png",
         datasheet: "#"
     },
     {
@@ -896,7 +896,7 @@ const productsData = [
         subCategory: "Measuring Instruments",
         shortDescription: "Electronic measurement instruments.",
         fullDescription: "Electronic measuring meters for various electrical parameters and industrial measurements.",
-        image: "/devai/images/products/electronic-measuring-meter.png",
+        image: "../images/products/electronic-measuring-meter.png",
         datasheet: "#"
     },
     {
@@ -907,7 +907,7 @@ const productsData = [
         subCategory: "Measuring Instruments",
         shortDescription: "LED display measuring instrument.",
         fullDescription: "LED indicating voltmeters and ammeters for panel mounting and electrical parameter display.",
-        image: "/devai/images/products/led-voltmeter.png",
+        image: "../images/products/led-voltmeter.png",
         datasheet: "#"
     },
     {
@@ -918,7 +918,7 @@ const productsData = [
         subCategory: "Measuring Instruments",
         shortDescription: "Multi-parameter electrical meter.",
         fullDescription: "Multifunction meters for measuring multiple electrical parameters simultaneously.",
-        image: "/devai/images/products/multifunction-meter.png",
+        image: "../images/products/multifunction-meter.png",
         datasheet: "#"
     },
     {
@@ -929,9 +929,76 @@ const productsData = [
         subCategory: "Measuring Instruments",
         shortDescription: "Equipment runtime counter.",
         fullDescription: "Hour meters for tracking equipment operating time and maintenance scheduling.",
-        image: "/devai/images/products/hour-meter.png",
+        image: "../images/products/hour-meter.png",
         datasheet: "#"
     }
+    , {
+        id: "hydraulic-power-pack",
+        productName: "Hydraulic Power Pack",
+        manufacturerName: "Bosch Rexroth / Yuken",
+        category: "Hydraulics & Pneumatics",
+        subCategory: "Hydraulic Systems",
+        shortDescription: "Compact hydraulic power unit for industrial applications.",
+        fullDescription: "Hydraulic power packs generate and supply pressurized hydraulic oil to operate cylinders, motors, and valves. Designed for continuous-duty industrial use with high efficiency and reliability.",
+        image: "../images/products/hydraulic-power-pack.png",
+        datasheet: "#"
+    },
+    {
+        id: "hydraulic-cylinder",
+        productName: "Hydraulic Cylinder",
+        manufacturerName: "Parker / Eaton",
+        category: "Hydraulics & Pneumatics",
+        subCategory: "Hydraulic Actuators",
+        shortDescription: "Double-acting hydraulic cylinder for heavy-duty motion.",
+        fullDescription: "High-performance hydraulic cylinders used for linear motion in industrial machinery. Built with robust seals and precision-machined barrels for long service life.",
+        image: "../images/products/hydraulic-cylinder.png",
+        datasheet: "#"
+    },
+    {
+        id: "directional-control-valve",
+        productName: "Directional Control Valve",
+        manufacturerName: "Yuken / Bosch Rexroth",
+        category: "Hydraulics & Pneumatics",
+        subCategory: "Hydraulic Valves",
+        shortDescription: "Solenoid-operated directional control valve.",
+        fullDescription: "Directional control valves regulate the flow path of hydraulic fluid, enabling precise control of actuators. Suitable for high-pressure industrial hydraulic circuits.",
+        image: "../images/products/directional-control-valve.png",
+        datasheet: "#"
+    },
+    {
+        id: "industrial-air-compressor",
+        productName: "Industrial Air Compressor",
+        manufacturerName: "Atlas Copco / ELGi",
+        category: "Hydraulics & Pneumatics",
+        subCategory: "Pneumatic Systems",
+        shortDescription: "High-efficiency compressed air generation system.",
+        fullDescription: "Industrial air compressors supply compressed air for pneumatic tools and automation systems. Designed for energy efficiency, low noise, and continuous operation.",
+        image: "../images/products/industrial-air-compressor.png",
+        datasheet: "#"
+    },
+    {
+        id: "pneumatic-solenoid-valve",
+        productName: "Pneumatic Solenoid Valve",
+        manufacturerName: "SMC / Festo",
+        category: "Hydraulics & Pneumatics",
+        subCategory: "Pneumatic Valves",
+        shortDescription: "Electrically actuated pneumatic control valve.",
+        fullDescription: "Pneumatic solenoid valves control airflow in automation systems. Compact design with fast switching response, suitable for industrial and process automation.",
+        image: "../images/products/pneumatic-solenoid-valve.png",
+        datasheet: "#"
+    },
+    {
+        id: "air-preparation-unit-frl",
+        productName: "Air Preparation Unit (FRL)",
+        manufacturerName: "SMC / Parker",
+        category: "Hydraulics & Pneumatics",
+        subCategory: "Pneumatic Accessories",
+        shortDescription: "Filter, regulator, and lubricator unit for clean air supply.",
+        fullDescription: "FRL units ensure clean, regulated, and lubricated compressed air supply to pneumatic equipment, improving performance and extending component life.",
+        image: "../images/products/air-preparation-unit-frl.png",
+        datasheet: "#"
+    }
+
 ];
 
 // Export for Node.js environment if needed, otherwise it's a global variable in browser
