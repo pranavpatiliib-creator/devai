@@ -192,8 +192,11 @@
 
 .product-flip-card-front {
     background: #ffffff;
+    position: relative;
     display: flex;
     flex-direction: column;
+    padding: 1.5rem;
+    padding-bottom: 3rem;
 }
 
 .product-flip-card-back {
@@ -202,6 +205,20 @@
     transform: rotateY(180deg);
     padding: 2rem;
     text-align: center;
+}
+
+.flip-hint {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    pointer-events: none;
 }
 
 /* Image Area */
@@ -221,8 +238,32 @@
     transition: transform 0.4s ease;
 }
 
+.image-fallback {
+    display: none;
+    position: absolute;
+    font-size: 2rem;
+    /* LARGE */
+    font-weight: 800;
+    color: red;
+    /* RED */
+    text-align: center;
+    user-select: none;
+}
+
 .product-flip-card:hover .image-wrapper img {
     transform: scale(1.05);
+}
+
+.category-tag {
+    display: block;
+    /* makes centering work */
+    text-align: center;
+    /* ✅ CENTER */
+    width: 100%;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #001f42;
+    padding: 0.75rem 0;
 }
 
 /* Product Info */
