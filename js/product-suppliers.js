@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const image = supplier.image || 'images/placeholder.png';
         const description = supplier.description || 'Information unavailable';
         const country = supplier.country ? '<span>🌍 ' + supplier.country + '</span>' : '';
-        
+
         // Determine button text and data attributes
         const hasSupplierPage = supplier.supplierPage && supplier.supplierPage.trim() !== '';
         const hasWebsite = supplier.website && supplier.website.trim() !== '';
@@ -60,16 +60,22 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
 
         gridContainer.appendChild(card);
+
+        // Check if content overflows and add scroll indicator
+        const cardBack = card.querySelector('.flip-card-back');
+        if (cardBack.scrollHeight > cardBack.clientHeight) {
+            cardBack.classList.add('has-scroll');
+        }
     });
 
     // Add button click handlers after cards are created
     document.querySelectorAll('.supplier-button').forEach(button => {
-        button.addEventListener('click', function(event) {
+        button.addEventListener('click', function (event) {
             event.stopPropagation(); // Prevent card flip
-            
+
             const supplierPage = this.getAttribute('data-supplier-page');
             const website = this.getAttribute('data-website');
-            
+
             // Prioritize internal page over external website
             if (supplierPage && supplierPage.trim() !== '') {
                 window.location.href = imagePath + 'productsupplier.html?supplier=' + encodeURIComponent(supplierPage);

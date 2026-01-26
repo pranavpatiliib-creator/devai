@@ -27,7 +27,7 @@
     margin: 0 auto;
 }
 
-/* Grid Layout - THIS IS IMPORTANT */
+/* Grid Layout */
 .manufacturers-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -83,16 +83,17 @@
     backface-visibility: hidden;
     border-radius: 12px;
     overflow: hidden;
+    background-color: white;
+}
+
+/* Front Side */
+.flip-card-front {
+    padding: 2rem;
+    border: 1px solid #e0e0e0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
-}
-
-.flip-card-front {
-    padding: 2rem;
-    border: 1px solid #e0e0e0;
 }
 
 .flip-card-front img {
@@ -115,15 +116,20 @@
     letter-spacing: 1px;
 }
 
+/* Back Side - CONSOLIDATED */
 .flip-card-back {
     background: linear-gradient(135deg, #0d3b66 0%, #1a5c96 100%);
     color: white;
     transform: rotateY(180deg);
-    padding: 2rem;
-    text-align: left;
-    align-items: flex-start;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    position: relative;
 }
 
 .flip-card-back h3 {
@@ -132,39 +138,72 @@
     border-bottom: 2px solid #ffa500;
     padding-bottom: 0.5rem;
     width: 100%;
+    text-align: center;
 }
 
 .flip-card-back .country {
     font-size: 0.9rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     font-style: italic;
     color: #ddd;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
+    width: 100%;
 }
 
 .flip-card-back .description {
     font-size: 0.95rem;
-    line-height: 1.5;
-    overflow: hidden;
-    flex: 1;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-    line-clamp: 6;
-    -webkit-box-orient: vertical;
-}
-
-.card-actions {
-    width: 100%;
+    line-height: 1.6;
+    margin: 10px 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
     text-align: center;
-    margin-top: 1rem;
+    flex: 1;
 }
 
+/* Custom scrollbar styling */
+.flip-card-back::-webkit-scrollbar {
+    width: 6px;
+}
+
+.flip-card-back::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.flip-card-back::-webkit-scrollbar-thumb {
+    background: rgba(255, 165, 0, 0.6);
+    border-radius: 10px;
+}
+
+.flip-card-back::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 165, 0, 0.8);
+}
+
+/* Scroll indicator fade */
+.flip-card-back::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(to bottom, transparent, rgba(13, 59, 102, 0.8));
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.flip-card-back.has-scroll::after {
+    opacity: 1;
+}
+
+/* Supplier button - centered, yellow/orange */
 .supplier-button {
     display: block;
-    margin: 12px auto 0;
+    margin: 12px auto 8px;
     padding: 8px 18px;
     background-color: #ffa500;
     color: #0d3b66;
@@ -175,6 +214,7 @@
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .supplier-button:hover {
@@ -182,6 +222,55 @@
     transform: translateY(-2px);
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .manufacturers-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        padding: 1rem;
+        gap: 2rem;
+    }
+
+    .flip-card {
+        height: 280px;
+    }
+
+    .flip-card-back {
+        padding: 1.2rem;
+    }
+
+    .flip-card-back h3 {
+        font-size: 1.1rem;
+    }
+
+    .flip-card-back .description {
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .manufacturers-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        padding: 1rem;
+        gap: 2rem;
+    }
+
+    .flip-card {
+        height: 280px;
+    }
+
+    .flip-card-back {
+        padding: 1.2rem;
+    }
+
+    .flip-card-back h3 {
+        font-size: 1.1rem;
+    }
+
+    .flip-card-back .description {
+        font-size: 0.9rem;
+    }
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
