@@ -35,7 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const name = supplier.name || 'Unknown';
         const image = supplier.image || 'images/placeholder.png';
         const description = supplier.description || 'Information unavailable';
-        const country = supplier.country ? `<span>🌍 ${supplier.country}</span>` : '';
+        const country = supplier.country ? '<span>🌍 ' + supplier.country + '</span>' : '';
+        
+        // Determine button text and data attributes
+        const hasSupplierPage = supplier.supplierPage && supplier.supplierPage.trim() !== '';
+        const hasWebsite = supplier.website && supplier.website.trim() !== '';
+        const buttonText = hasSupplierPage ? 'View Supplier' : 'Visit Website';
+        const supplierPageAttr = hasSupplierPage ? supplier.supplierPage : '';
+        const websiteAttr = hasWebsite ? supplier.website : '';
 
         card.innerHTML = `
             <div class="flip-card-inner">
@@ -45,12 +52,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="flip-card-back">
                     <h3>${name}</h3>
-                    ${country ? `<div class="country">${country}</div>` : ''}
+                    ${country ? '<div class="country">' + country + '</div>' : ''}
                     <div class="description">${description}</div>
+                    ${hasSupplierPage || hasWebsite ? '<button class="supplier-button" data-supplier-page="' + supplierPageAttr + '" data-website="' + websiteAttr + '">' + buttonText + '</button>' : ''}
                 </div>
             </div>
         `;
 
         gridContainer.appendChild(card);
+    });
+
+    // Add button click handlers after cards are created
+    document.querySelectorAll('.supplier-button').forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.stopPropagation(); // Prevent card flip
+            
+            const supplierPage = this.getAttribute('data-supplier-page');
+            const website = this.getAttribute('data-website');
+            
+            // Prioritize internal page over external website
+            if (supplierPage && supplierPage.trim() !== '') {
+                window.location.href = imagePath + 'productsupplier.html?supplier=' + encodeURIComponent(supplierPage);
+            } else if (website && website.trim() !== '') {
+                window.open(website, '_blank', 'noopener,noreferrer');
+            }
+        });
     });
 });

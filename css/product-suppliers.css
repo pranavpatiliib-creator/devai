@@ -122,6 +122,8 @@
     padding: 2rem;
     text-align: left;
     align-items: flex-start;
+    display: flex;
+    flex-direction: column;
 }
 
 .flip-card-back h3 {
@@ -146,12 +148,40 @@
     font-size: 0.95rem;
     line-height: 1.5;
     overflow: hidden;
+    flex: 1;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 7;
-    line-clamp: 7;
+    -webkit-line-clamp: 6;
+    line-clamp: 6;
     -webkit-box-orient: vertical;
 }
+
+.card-actions {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.supplier-button {
+    display: block;
+    margin: 12px auto 0;
+    padding: 8px 18px;
+    background-color: #ffa500;
+    color: #0d3b66;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.supplier-button:hover {
+    background-color: #ff8c00;
+    transform: translateY(-2px);
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
