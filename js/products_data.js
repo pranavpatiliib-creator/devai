@@ -467,7 +467,7 @@ const productsData = [
         subCategory: "Programmable Logic Controllers",
         shortDescription: "Modular I/O for distributed control systems.",
         fullDescription: "Distributed I/O modules for extending PLC capabilities in remote locations. Supports various communication protocols and provides reliable signal processing.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/distributed-io.png",
         datasheet: "#"
     },
     {
@@ -478,7 +478,7 @@ const productsData = [
         subCategory: "Variable Frequency Drive Systems",
         shortDescription: "Smooth motor starting and stopping.",
         fullDescription: "Soft starters provide controlled acceleration and deceleration of electric motors, reducing mechanical stress and electrical disturbances.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/soft-starter.png",
         datasheet: "#"
     },
     {
@@ -489,7 +489,7 @@ const productsData = [
         subCategory: "Pressure Switches & Transducers",
         shortDescription: "Pressure monitoring and control.",
         fullDescription: "Pressure switches and transducers for monitoring fluid pressure in industrial systems. Available in various pressure ranges and electrical outputs.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/pressure-switch.png",
         datasheet: "#"
     },
     {
@@ -500,7 +500,7 @@ const productsData = [
         subCategory: "Presence Detectors",
         shortDescription: "Detection of objects in automation.",
         fullDescription: "Presence detectors for reliable object detection in industrial automation applications. IP67 rated for harsh environments.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/presence-detector.png",
         datasheet: "#"
     },
     {
@@ -511,7 +511,7 @@ const productsData = [
         subCategory: "Coded Magnetic Switches",
         shortDescription: "Safety magnetic switch with coding.",
         fullDescription: "Coded magnetic safety switches for machine guarding. Provides high safety levels with unique coding to prevent tampering.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/coded-magnetic-switch.png",
         datasheet: "#"
     },
     {
@@ -533,7 +533,7 @@ const productsData = [
         subCategory: "Auto Source Changeover Systems",
         shortDescription: "Automatic switching between power sources.",
         fullDescription: "Automatic transfer switches for seamless switching between main and backup power sources. Ensures uninterrupted power supply.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/auto-changeover-system.png",
         datasheet: "#"
     },
     {
@@ -544,7 +544,7 @@ const productsData = [
         subCategory: "Surge Arresters",
         shortDescription: "Protection against voltage surges.",
         fullDescription: "Surge arresters protect electrical equipment from overvoltage transients caused by lightning or switching operations.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/surge-arrester.png",
         datasheet: "#"
     },
     {
@@ -555,7 +555,7 @@ const productsData = [
         subCategory: "Time Switches / Light Sensitive Switches",
         shortDescription: "Programmable timer for electrical circuits.",
         fullDescription: "Digital time switches for automated control of lighting, heating, and other electrical loads based on time schedules.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/time-switch.png",
         datasheet: "#"
     },
     {
@@ -566,7 +566,7 @@ const productsData = [
         subCategory: "Electronic Over Current Relays",
         shortDescription: "Advanced overcurrent protection.",
         fullDescription: "Electronic overcurrent relays provide precise protection against overload and short circuit conditions in electrical systems.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/electronic-overcurrent-relay.png",
         datasheet: "#"
     },
     {
@@ -577,7 +577,7 @@ const productsData = [
         subCategory: "Power Meters and Analyzers",
         shortDescription: "Electrical power measurement and monitoring.",
         fullDescription: "Digital power meters for measuring electrical parameters like voltage, current, power, and energy consumption.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/power-meter.png",
         datasheet: "#"
     },
     {
@@ -588,7 +588,7 @@ const productsData = [
         subCategory: "Power Quality Analyzer",
         shortDescription: "Analysis of electrical power quality.",
         fullDescription: "Portable power quality analyzers for monitoring harmonics, transients, and other power quality parameters.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/power-quality-analyzer.png",
         datasheet: "#"
     },
     {
@@ -599,7 +599,7 @@ const productsData = [
         subCategory: "PF Improvement Capacitor",
         shortDescription: "Power factor correction capacitor.",
         fullDescription: "Power factor improvement capacitors for enhancing electrical system efficiency and reducing energy costs.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/pf-capacitor.png",
         datasheet: "#"
     },
     {
@@ -610,7 +610,7 @@ const productsData = [
         subCategory: "Tower Light",
         shortDescription: "Multi-color signal tower.",
         fullDescription: "LED signal towers for visual indication of machine status, alarms, and process conditions in industrial environments.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/tower-light.png",
         datasheet: "#"
     },
     {
@@ -621,7 +621,7 @@ const productsData = [
         subCategory: "Warning / Revolving Light",
         shortDescription: "Rotating warning beacon.",
         fullDescription: "Revolving warning lights for alerting personnel to hazardous conditions or equipment status.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/warning-light.png",
         datasheet: "#"
     },
     {
@@ -632,7 +632,7 @@ const productsData = [
         subCategory: "Siren / Buzzer",
         shortDescription: "Audible alarm device.",
         fullDescription: "Industrial sirens and buzzers for audible signaling in noisy industrial environments.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/siren-buzzer.png",
         datasheet: "#"
     },
     {
@@ -643,7 +643,7 @@ const productsData = [
         subCategory: "Push Buttons, Switches, Pilot Lights",
         shortDescription: "Manual control interface.",
         fullDescription: "Industrial push buttons and switches for operator control of machinery and processes.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/push-button.png",
         datasheet: "#"
     },
     {
@@ -654,7 +654,7 @@ const productsData = [
         subCategory: "Control Stations",
         shortDescription: "Operator control panel.",
         fullDescription: "Pre-assembled control stations with push buttons, selectors, and indicators for machine control.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/control-station.png",
         datasheet: "#"
     },
     {
@@ -665,7 +665,7 @@ const productsData = [
         subCategory: "Pendant Stations",
         shortDescription: "Portable control pendant.",
         fullDescription: "Pendant control stations for crane and hoist operation, providing ergonomic control interfaces.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/pendant-station.png",
         datasheet: "#"
     },
     {
@@ -676,7 +676,7 @@ const productsData = [
         subCategory: "Joystick Controllers",
         shortDescription: "Multi-axis control device.",
         fullDescription: "Industrial joysticks for precise control of machinery movement in multiple axes.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/joystick-controller.png",
         datasheet: "#"
     },
     {
@@ -698,7 +698,7 @@ const productsData = [
         subCategory: "Plug & Socket with Enclosure",
         shortDescription: "Weatherproof plug and socket assembly.",
         fullDescription: "Enclosed plug and socket combinations for outdoor and industrial applications.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/plug-socket-enclosure.png",
         datasheet: "#"
     },
     {
@@ -709,7 +709,7 @@ const productsData = [
         subCategory: "Cable Drums",
         shortDescription: "Cable storage and dispensing.",
         fullDescription: "Cable drums for safe storage and controlled dispensing of electrical cables.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/cable-drum.png",
         datasheet: "#"
     },
     {
@@ -742,7 +742,7 @@ const productsData = [
         subCategory: "Empty Enclosures",
         shortDescription: "Electrical enclosure housing.",
         fullDescription: "Empty electrical enclosures for housing control equipment and protecting against environmental factors.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/empty-enclosure.png",
         datasheet: "#"
     },
     {
@@ -764,7 +764,7 @@ const productsData = [
         subCategory: "Cooling Fan",
         shortDescription: "Enclosure ventilation fan.",
         fullDescription: "Cooling fans for maintaining optimal temperatures inside electrical enclosures.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/cooling-fan.png",
         datasheet: "#"
     },
     {
@@ -775,7 +775,7 @@ const productsData = [
         subCategory: "Fan Filter",
         shortDescription: "Filtered ventilation unit.",
         fullDescription: "Fan filter units for filtered air circulation in electrical enclosures.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/fan-filter.png",
         datasheet: "#"
     },
     {
@@ -786,7 +786,7 @@ const productsData = [
         subCategory: "Heat Shrink",
         shortDescription: "Cable insulation tubing.",
         fullDescription: "Heat shrink tubing for electrical insulation and mechanical protection of cables and connections.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/heat-shrink.png",
         datasheet: "#"
     },
     {
@@ -797,7 +797,7 @@ const productsData = [
         subCategory: "Spiral",
         shortDescription: "Cable bundling spiral wrap.",
         fullDescription: "Spiral wrapping for organizing and protecting cable bundles.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/spiral-wrapping.png",
         datasheet: "#"
     },
     {
@@ -819,7 +819,7 @@ const productsData = [
         subCategory: "Safety Products",
         shortDescription: "Hands-free control switch.",
         fullDescription: "Foot-operated switches for hands-free control of machinery and processes.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/foot-switch.png",
         datasheet: "#"
     },
     {
@@ -830,7 +830,7 @@ const productsData = [
         subCategory: "Safety Products",
         shortDescription: "Emergency stop pull cord.",
         fullDescription: "Pull cord switches for emergency stopping of conveyor systems and machinery.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/pull-cord-switch.png",
         datasheet: "#"
     },
     {
@@ -841,7 +841,7 @@ const productsData = [
         subCategory: "Safety Products",
         shortDescription: "Safety guard monitoring switch.",
         fullDescription: "Safety switches for monitoring the position of protective guards on machinery.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/guard-protection-switch.png",
         datasheet: "#"
     },
     {
@@ -852,7 +852,7 @@ const productsData = [
         subCategory: "Test & Measurement System",
         shortDescription: "Insulation resistance measurement.",
         fullDescription: "Analog insulation testers for measuring insulation resistance in electrical systems.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/analog-insulation-tester.png",
         datasheet: "#"
     },
     {
@@ -863,7 +863,7 @@ const productsData = [
         subCategory: "Test & Measurement System",
         shortDescription: "Digital insulation resistance tester.",
         fullDescription: "Digital insulation testers with advanced features for electrical safety testing.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/digital-insulation-tester.png",
         datasheet: "#"
     },
     {
@@ -874,7 +874,7 @@ const productsData = [
         subCategory: "Test & Measurement System",
         shortDescription: "High voltage insulation testing.",
         fullDescription: "High voltage insulation testers for testing insulation integrity in high-voltage systems.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/high-voltage-insulation-tester.png",
         datasheet: "#"
     },
     {
@@ -885,7 +885,7 @@ const productsData = [
         subCategory: "Test & Measurement System",
         shortDescription: "Automated insulation testing system.",
         fullDescription: "Automatic insulation testers with test stands for high-volume testing applications.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/automatic-insulation-tester.png",
         datasheet: "#"
     },
     {
@@ -896,7 +896,7 @@ const productsData = [
         subCategory: "Measuring Instruments",
         shortDescription: "Electronic measurement instruments.",
         fullDescription: "Electronic measuring meters for various electrical parameters and industrial measurements.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/electronic-measuring-meter.png",
         datasheet: "#"
     },
     {
@@ -907,7 +907,7 @@ const productsData = [
         subCategory: "Measuring Instruments",
         shortDescription: "LED display measuring instrument.",
         fullDescription: "LED indicating voltmeters and ammeters for panel mounting and electrical parameter display.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/led-voltmeter.png",
         datasheet: "#"
     },
     {
@@ -918,7 +918,7 @@ const productsData = [
         subCategory: "Measuring Instruments",
         shortDescription: "Multi-parameter electrical meter.",
         fullDescription: "Multifunction meters for measuring multiple electrical parameters simultaneously.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/multifunction-meter.png",
         datasheet: "#"
     },
     {
@@ -929,7 +929,7 @@ const productsData = [
         subCategory: "Measuring Instruments",
         shortDescription: "Equipment runtime counter.",
         fullDescription: "Hour meters for tracking equipment operating time and maintenance scheduling.",
-        image: "/devai/images/products/placeholder_product.png",
+        image: "/devai/images/products/hour-meter.png",
         datasheet: "#"
     }
 ];
