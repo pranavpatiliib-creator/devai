@@ -52,7 +52,11 @@
         document.addEventListener('DOMContentLoaded', () => {
             const safetyProducts = productsData.filter(p =>
                 p.category === 'Safety & Security Systems' ||
-                p.category === 'Safety'
+                p.category === 'Safety' ||
+                p.category === 'Security'||
+                p.category === "Safety & PPE"||
+                p.category === "Safety, Testing & Measurement"
+
             );
             renderProductsGrid(safetyProducts, 'products-grid');
         });
