@@ -154,7 +154,7 @@ main {
 
 .brand-center {
     font-family: "Times New Roman", serif;
-    font-size: clamp(2.4rem, 3rem,3.2rem);
+    font-size: clamp(2.4rem, 3rem, 3.2rem);
     /* Increased 50% from 2.8rem */
     font-weight: 900;
     color: #ffffff;
@@ -254,7 +254,7 @@ main {
         min-height: var(--header-height);
     }
 
-   
+
     main {
         margin-top: 0;
         /* Remove extra margin, body padding handles it */
@@ -347,7 +347,7 @@ main {
         font-size: 1rem;
     }
 
-  
+
 
     main {
         margin-top: 0;
@@ -475,7 +475,7 @@ main {
 /* Laptop screens - minimal header padding */
 @media (min-width: 769px) {
     .brand-center {
-        font-size: 3.2rem !important;
+        font-size: 2.7rem !important;
         font-weight: 900;
     }
 }

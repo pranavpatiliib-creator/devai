@@ -6,13 +6,7 @@ const productSuppliersData = [
         "country": "Switzerland",
         "website": "https://new.abb.com/"
     },
-    {
-        "name": "Taparia",
-        "image": "images/manufacturers/TAPARIA.png",
-        "description": "Taparia is a leading manufacturer of industrial automation components, specializing in high-quality sensors, actuators, and control systems for various industrial applications.",
-        "country": "India",
-        "website": "https://www.taparia.com/"
-    },
+
     {
         "name": "Seimens",
         "image": "images/manufacturers/SEIMENS.png",
@@ -189,7 +183,7 @@ const productSuppliersData = [
 
     },
     {
-        "name": "PANDF",
+        "name": "PAN&F",
         "image": "images/manufacturers/PANDF.png",
         "description": "Pepperl+Fuchs (P&F) is a leading developer and manufacturer of industrial sensors and explosion protection equipment, critical for factory and process automation.",
         "country": "Germany",
