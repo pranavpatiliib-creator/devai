@@ -1030,7 +1030,7 @@ const productsData = [
         subCategory: "Thermal Imaging Cameras",
         shortDescription: "Entry-level compact thermal camera.",
         fullDescription: "FLIR C2 compact thermal camera provides affordable thermal imaging for detecting energy loss, moisture intrusion, and electrical faults.",
-        image: "../images/products/flir-c2-compact-thermal-camera.png",
+        image: "../images/products/flir-c2-compact-thermal-imager.png",
         datasheet: "#"
     },
     {
