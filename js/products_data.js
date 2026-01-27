@@ -1011,17 +1011,7 @@ const productsData = [
         image: "../images/products/flir-tg297-thermal-camera.png",
         datasheet: "#"
     },
-    {
-        id: "flir-c3-compact-thermal-imager",
-        productName: "Flir C3 Compact Thermal Imager",
-        manufacturerName: "FLIR",
-        category: "Safety, Testing & Measurement",
-        subCategory: "Thermal Imaging Cameras",
-        shortDescription: "Pocket-sized thermal imaging camera.",
-        fullDescription: "FLIR C3 compact thermal imager with MSX technology for enhanced image detail. Ideal for electrical, mechanical, and building inspections.",
-        image: "../images/products/flir-c3-compact-thermal-imager.png",
-        datasheet: "#"
-    },
+
     {
         id: "flir-c2-compact-thermal-camera",
         productName: "Flir C2 Compact Thermal Camera",
