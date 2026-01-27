@@ -7,6 +7,34 @@ const productSuppliersData = [
         "website": "https://new.abb.com/"
     },
     {
+        "name": "Taparia",
+        "image": "images/manufacturers/TAPARIA.png",
+        "description": "Taparia is a leading manufacturer of industrial automation components, specializing in high-quality sensors, actuators, and control systems for various industrial applications.",
+        "country": "India",
+        "website": "https://www.taparia.com/"
+    },
+    {
+        "name": "Seimens",
+        "image": "images/manufacturers/SEIMENS.png",
+        "description": "Siemens is a global technology leader in industrial automation and digitalization, offering comprehensive solutions for manufacturing, infrastructure, and energy sectors.",
+        "country": "Germany",
+        "website": "https://www.siemens.com/"
+    },
+    {
+        "name": "L&T Electrical & Automation",
+        "image": "images/manufacturers/LT_ELECTRICAL_AUTOMATION.png",
+        "description": "L&T Electrical & Automation is a leading provider of electrical and automation solutions, offering a wide range of products for industrial and commercial applications.",
+        "country": "India",
+        "website": "https://www.lntinfotech.com/"
+    },
+    {
+        "name": "Legrand",
+        "image": "images/manufacturers/LEGRAND.png",
+        "description": "Legrand is a global leader in electrical and automation solutions, offering a wide range of products for residential, commercial, and industrial applications.",
+        "country": "France",
+        "website": "https://www.legrand.com/"
+    },
+    {
         "name": "APC",
         "image": "images/manufacturers/APC.png",
         "description": "APC by Schneider Electric provides power protection and management solutions, including UPS systems, surge suppressors, and power conditioning products for home and business networks.",
