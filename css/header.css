@@ -25,7 +25,7 @@
 /* Tablet (768px - 1023px) */
 @media (min-width: 768px) {
     :root {
-        --header-height: 80px;
+        --header-height: 120px;
         --header-padding-y: 1rem;
         --header-padding-x: 2rem;
         --logo-size: 40px;
@@ -154,7 +154,7 @@ main {
 
 .brand-center {
     font-family: "Times New Roman", serif;
-    font-size: clamp(1rem, 3vw, 4.2rem);
+    font-size: clamp(2.4rem, 3rem,3.2rem);
     /* Increased 50% from 2.8rem */
     font-weight: 900;
     color: #ffffff;
@@ -237,7 +237,7 @@ main {
 /* Desktop override for larger logo */
 @media (min-width: 769px) {
     .logo img {
-        height: 165px;
+        height: 80px;
         /* Your custom large size */
         width: auto;
     }
@@ -254,11 +254,7 @@ main {
         min-height: var(--header-height);
     }
 
-    body {
-        padding-top: 220px;
-        /* Your custom offset for large logo */
-    }
-
+   
     main {
         margin-top: 0;
         /* Remove extra margin, body padding handles it */
@@ -351,10 +347,7 @@ main {
         font-size: 1rem;
     }
 
-    body {
-        padding-top: 100px;
-        /* Mobile header offset */
-    }
+  
 
     main {
         margin-top: 0;
@@ -421,9 +414,6 @@ main {
     /* Force to start */
 }
 
-/* =========================
-   DESKTOP FIX - NAV LINKS DROPDOWN
-   ========================= */
 
 
 .nav-links {
@@ -483,14 +473,9 @@ main {
 /* Laptop and above */
 /* Laptop screens - even less padding */
 /* Laptop screens - minimal header padding */
-@media (min-width: 1024px) and (max-width: 1440px) {
-    .header {
-        padding: 0.3rem 1rem;
+@media (min-width: 769px) {
+    .brand-center {
+        font-size: 3.2rem !important;
+        font-weight: 900;
     }
-}
-    justify-content: center;
-.header {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }

@@ -4,7 +4,7 @@
 .hero {
     background: linear-gradient(135deg, #fafafa 0%, #195ca2 100%);
     color: white;
-    padding: 210px 20px 120px;
+    padding: 0px 20px 120px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -42,6 +42,8 @@
     max-width: 800px;
     position: relative;
     z-index: 2;
+    padding-top: 100px;
+
 }
 
 /* Hero heading with premium text animation */
@@ -249,7 +251,8 @@
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .hero {
-        padding: 190px 20px 120px;
+        padding: 0 20px 120px;
+
     }
 
     .hero h1 {
@@ -272,7 +275,8 @@
 
 @media (max-width: 576px) {
     .hero {
-        padding: 170px 15px 100px;
+        padding: 0 15px 100px;
+
     }
 
     .hero h1 {
@@ -327,7 +331,7 @@
 
 @media (max-width: 375px) {
     .hero {
-        padding: 150px 10px 70px;
+       padding: 0 10px 70px;
     }
 
     .hero h1 {
