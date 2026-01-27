@@ -7,10 +7,10 @@
     <meta name="description"
         content="About Devai Technologies - Your trusted partner for premium industrial electrical products and solutions.">
     <title>About Us - Devai Technologies</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/about-us.css">
-    <link rel="stylesheet" href="css/owner.css">
-    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/about-us.css">
+    <link rel="stylesheet" href="../css/owner.css">
+    <link rel="stylesheet" href="../css/preloader.css">
 </head>
 
 <body class="loading">
@@ -21,7 +21,7 @@
             <div class="ring ring-2"></div>
         </div>
         <div class="preloader-content">
-            <img src="images/logo_transparent.png" alt="Devai Logo" class="preloader-logo">
+            <img src="../images/logo_transparent.png" alt="Devai Logo" class="preloader-logo">
             <h1 class="brand-text-loader">DEVAI <span>TECHNOLOGIES</span></h1>
         </div>
     </div>
@@ -176,8 +176,8 @@
                 <p>Get in touch with our team to discuss your industrial electrical needs and find the perfect solutions
                     for your business.</p>
                 <div class="cta-buttons">
-                    <a href="categories/products.html" class="btn btn-primary">Explore Products</a>
-                    <a href="categories/contact.html" class="btn btn-secondary">Contact Us</a>
+                    <a href="../categories/products.html" class="btn btn-primary">Explore Products</a>
+                    <a href="../categories/contact.html" class="btn btn-secondary">Contact Us</a>
                 </div>
             </div>
         </section>
@@ -187,13 +187,13 @@
     <div id="footer"></div>
 
     <!-- Scripts -->
-    <script src="js/hamburger.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/preloader.js"></script>
+    <script src="../js/hamburger.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/preloader.js"></script>
     <script>
         // Load owner component into the leadership section
         document.addEventListener('DOMContentLoaded', function () {
-            fetch('components/owner.html')
+            fetch('../components/owner.html')
                 .then(response => response.text())
                 .then(html => {
                     document.getElementById('owner-component').innerHTML = html;
