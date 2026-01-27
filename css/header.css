@@ -479,3 +479,18 @@ main {
     background: rgba(255, 215, 0, 0.1);
     color: #ffd700;
 }
+
+/* Laptop and above */
+/* Laptop screens - even less padding */
+/* Laptop screens - minimal header padding */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .header {
+        padding: 0.3rem 1rem;
+    }
+}
+    justify-content: center;
+.header {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
