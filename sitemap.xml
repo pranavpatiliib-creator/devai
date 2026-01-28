@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://devaigroup.com/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://devaigroup.com/about-us.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://devaigroup.com/contact.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://devaigroup.com/products.html</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://devaigroup.com/product-suppliers.html</loc>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://devaigroup.com/automation.html</loc>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://devaigroup.com/electrical.html</loc>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://devaigroup.com/mechanical.html</loc>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://devaigroup.com/hydraulics.html</loc>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://devaigroup.com/instruments.html</loc>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://devaigroup.com/safety.html</loc>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://devaigroup.com/spares.html</loc>
+    <priority>0.75</priority>
+  </url>
+
+</urlset>
