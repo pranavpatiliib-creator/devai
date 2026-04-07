@@ -8,7 +8,7 @@
 
 .product-supplier-header {
     text-align: center;
-    padding: 3.5rem 2rem 2.5rem;
+    padding: calc(var(--header-clearance) + 1.5rem) 2rem 2.5rem;
     background: linear-gradient(135deg, #0d3b66 0%, #051626 100%);
     color: white;
     margin-bottom: 2rem;
@@ -225,7 +225,7 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .product-supplier-header {
-        padding: 2.75rem 1.25rem 2rem;
+        padding: calc(var(--header-clearance) + 1rem) 1.25rem 2rem;
     }
 
     .product-supplier-header h1 {

@@ -5,6 +5,7 @@
 :root {
     /* Mobile (320px - 479px) */
     --header-height: 64px;
+    --header-clearance: 76px;
     --header-padding-y: 0.75rem;
     --header-padding-x: 1rem;
     --logo-size: 32px;
@@ -15,6 +16,7 @@
 @media (min-width: 480px) {
     :root {
         --header-height: 72px;
+        --header-clearance: 84px;
         --header-padding-y: 0.875rem;
         --header-padding-x: 1.5rem;
         --logo-size: 36px;
@@ -26,6 +28,7 @@
 @media (min-width: 768px) {
     :root {
         --header-height: 120px;
+        --header-clearance: 150px;
         --header-padding-y: 1rem;
         --header-padding-x: 2rem;
         --logo-size: 40px;
@@ -37,6 +40,7 @@
 @media (min-width: 1024px) {
     :root {
         --header-height: 96px;
+        --header-clearance: 132px;
         --header-padding-y: 1rem;
         --header-padding-x: 3rem;
         --logo-size: 48px;
@@ -48,6 +52,7 @@
 @media (min-width: 1440px) {
     :root {
         --header-height: 104px;
+        --header-clearance: 140px;
         --header-padding-y: 1.25rem;
         --header-padding-x: 4rem;
         --logo-size: 52px;
@@ -65,14 +70,15 @@
     left: 0;
     width: 100%;
     height: var(--header-height);
-    background: linear-gradient(135deg, #003d82 0%, #002b5c 100%);
+    background: linear-gradient(135deg, rgba(8, 18, 34, 0.78) 0%, rgba(8, 18, 34, 0.58) 100%);
     color: white;
     z-index: 1000;
     padding: var(--header-padding-y) var(--header-padding-x);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
     animation: slideDown 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     box-sizing: border-box;
 
     /* Flexbox for content alignment */
@@ -89,7 +95,6 @@
 body {
     margin: 0;
     padding: 0;
-    padding-top: var(--header-height);
 }
 
 main {
@@ -269,10 +274,9 @@ main {
 
     .header {
         padding: 0.4rem var(--header-padding-x);
-        /* Keep responsive horizontal padding */
         height: auto;
-        /* Allow header to grow */
         min-height: 60px;
+        background: linear-gradient(135deg, rgba(8, 18, 34, 0.84) 0%, rgba(8, 18, 34, 0.7) 100%);
     }
 
     .nav {
@@ -422,7 +426,7 @@ main {
     left: 0;
     right: 0;
     width: 100%;
-    background: linear-gradient(135deg, #002b5c 0%, #001f42 100%);
+    background: linear-gradient(135deg, rgba(8, 18, 34, 0.95) 0%, rgba(9, 27, 52, 0.92) 100%);
     flex-direction: column;
     gap: 0;
     list-style: none;

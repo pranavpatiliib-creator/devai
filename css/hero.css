@@ -4,7 +4,7 @@
 .hero {
     background: linear-gradient(135deg, #fafafa 0%, #195ca2 100%);
     color: white;
-    padding: 32px 20px 120px;
+    padding: calc(var(--header-clearance) + 32px) 20px 120px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -48,7 +48,7 @@
 
 @media (min-width: 769px) {
     .hero-content {
-        padding-top: 40px;
+        padding-top: 16px;
     }
 }
 
@@ -257,7 +257,7 @@
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .hero {
-        padding: 20px 20px 100px;
+        padding: calc(var(--header-clearance) + 20px) 20px 100px;
 
     }
 
@@ -281,7 +281,7 @@
 
 @media (max-width: 576px) {
     .hero {
-        padding: 16px 15px 100px;
+        padding: calc(var(--header-clearance) + 16px) 15px 100px;
 
     }
 
@@ -311,7 +311,7 @@
 
 @media (max-width: 480px) {
     .hero {
-        padding: 12px 12px 80px;
+        padding: calc(var(--header-clearance) + 12px) 12px 80px;
     }
 
     .hero h1 {
@@ -337,7 +337,7 @@
 
 @media (max-width: 375px) {
     .hero {
-       padding: 10px 10px 70px;
+       padding: calc(var(--header-clearance) + 10px) 10px 70px;
     }
 
     .hero h1 {

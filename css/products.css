@@ -17,10 +17,10 @@
 -------------------------- */
 .products-hero {
     text-align: center;
-    padding: 4rem 2rem 2rem;
+    padding: calc(var(--header-clearance) + 2rem) 2rem 2rem;
     background: linear-gradient(135deg, #0d3b66 0%, #051626 100%);
     color: white;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
 }
 
 .products-hero .container {
@@ -47,15 +47,16 @@
    ===================================================== */
 
 .product-categories {
-    padding: 2rem 0;
+    padding: 1.5rem 0 2rem;
     background: #f8f9fa;
+    margin-top: 0;
 }
 
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 4rem;
-    padding: 2rem 5%;
+    padding: 0 5% 2rem;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -351,7 +352,7 @@
     .products-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
-        padding: 1rem;
+        padding: 0 1rem 1rem;
     }
 
     .product-flip-card {
@@ -392,6 +393,18 @@
     }
 
     .products-hero {
-        padding: 6rem 2rem 4rem;
+        padding: calc(var(--header-clearance) + 4rem) 2rem 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-hero {
+        padding: calc(var(--header-clearance) + 1.5rem) 1rem 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-hero {
+        padding: calc(var(--header-clearance) + 1rem) 0.875rem 1.5rem;
     }
 }
