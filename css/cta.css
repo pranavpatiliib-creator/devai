@@ -2,27 +2,52 @@
 
 .cta-section.why-strip {
     background:
-        radial-gradient(circle at 18% 30%, rgba(255, 215, 0, 0.12) 0%, transparent 22%),
-        radial-gradient(circle at 82% 20%, rgba(122, 179, 232, 0.2) 0%, transparent 24%),
-        linear-gradient(120deg, #001f42 0%, #003d82 48%, #1c6aa8 100%);
-    color: #ffffff;
-    padding: 38px 24px 44px;
+        radial-gradient(circle at top, rgba(255, 215, 0, 0.04) 0%, transparent 24%),
+        linear-gradient(180deg, #fbfcfe 0%, #f2f5f9 100%);
+    color: #111827;
+    padding: 3rem 20px 1.75rem;
     text-align: center;
     position: relative;
     overflow: hidden;
 }
 
+.cta-section.why-strip::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(rgba(17, 24, 39, 0.08) 0.8px, transparent 0.8px),
+        radial-gradient(rgba(17, 24, 39, 0.04) 0.8px, transparent 0.8px);
+    background-position: 0 0, 6px 6px;
+    background-size: 12px 12px;
+    opacity: 0.42;
+    pointer-events: none;
+}
+
+.cta-section.why-strip::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #ffd700, transparent);
+}
+
 .why-strip .container {
     max-width: 1500px;
+    position: relative;
+    z-index: 1;
 }
 
 .why-strip h2 {
-    margin: 0 0 54px;
+    margin: 0 0 2.2rem;
     font-size: clamp(2.2rem, 4vw, 4rem);
     line-height: 1.08;
     font-weight: 800;
     letter-spacing: -0.02em;
-    text-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    color: #0b3568;
+    text-shadow: none;
 }
 
 .why-strip-grid {
@@ -58,7 +83,7 @@
     font-size: 1rem;
     line-height: 1.45;
     font-weight: 800;
-    color: #f6f8fc;
+    color: #0b3568;
 }
 
 @media (max-width: 1200px) {
@@ -70,7 +95,7 @@
 
 @media (max-width: 768px) {
     .cta-section.why-strip {
-        padding: 26px 18px 34px;
+        padding: 2.2rem 18px 1.5rem;
         margin-top: 18px;
     }
 

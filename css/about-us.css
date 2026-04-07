@@ -10,8 +10,8 @@
 
 /* Hero Section */
 .about-hero {
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-    color: white;
+    background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+    color: #0b3568;
     padding: calc(var(--header-clearance) + 3rem) 20px 4rem;
     text-align: center;
     margin-bottom: 0;
@@ -21,11 +21,12 @@
     font-size: 3rem;
     margin-bottom: 20px;
     font-weight: 700;
+    color: #0b3568;
 }
 
 .about-hero p {
     font-size: 1.3rem;
-    opacity: 0.95;
+    color: #28415f;
     max-width: 600px;
     margin: 0 auto;
 }
