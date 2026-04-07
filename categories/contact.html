@@ -77,6 +77,43 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="contact-form-wrap">
+                        <div class="contact-card inquiry-form">
+                            <h3>Send Us a Message</h3>
+                            <p class="form-intro">Fill out the form below and we'll get back to you shortly.</p>
+
+                            <form id="contact-form" data-app-script-url="https://script.google.com/macros/s/AKfycbwLA_d51-JFUz15b8SlXK2pCiXhkRlur6wyza1re4pZwPG2zKj8b2XOQczl9fPAerrbDw/exec">
+                                <div class="form-group">
+                                    <label for="company-name">Company Name *</label>
+                                    <input id="company-name" name="company_name" type="text" placeholder="Your company name" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="sender-name">Your Name *</label>
+                                    <input id="sender-name" name="sender_name" type="text" placeholder="Your full name" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email-address">Email Address *</label>
+                                    <input id="email-address" name="email" type="email" placeholder="your@email.com" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone-number">Phone Number *</label>
+                                    <input id="phone-number" name="phone" type="tel" placeholder="+91 XXXXX XXXXX" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Your Message / Product Requirement *</label>
+                                    <textarea id="message" name="message" placeholder="Tell us your product requirement or message" required></textarea>
+                                </div>
+
+                                <button type="submit" class="submit-btn">Send Message</button>
+                                <p id="contact-form-status" class="form-status" aria-live="polite"></p>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -86,6 +123,7 @@
 
     <script src="../js/main.js"></script>
     <script src="../js/hamburger.js"></script>
+    <script src="../js/contact-form.js"></script>
     <script src="../js/preloader.js"></script>
 </body>
 
