@@ -1,14 +1,14 @@
 /* Product Suppliers Page Styling */
 
 .product-suppliers-page {
-    padding-top: 100px;
+    padding-top: 0;
     background-color: #f8f9fa;
     min-height: 80vh;
 }
 
 .product-supplier-header {
     text-align: center;
-    padding: 4rem 2rem 2rem;
+    padding: 3.5rem 2rem 2.5rem;
     background: linear-gradient(135deg, #0d3b66 0%, #051626 100%);
     color: white;
     margin-bottom: 2rem;
@@ -224,6 +224,14 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .product-supplier-header {
+        padding: 2.75rem 1.25rem 2rem;
+    }
+
+    .product-supplier-header h1 {
+        font-size: 2rem;
+    }
+
     .manufacturers-grid {
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
         padding: 1rem;
