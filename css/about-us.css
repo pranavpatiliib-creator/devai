@@ -2,13 +2,14 @@
 
 .about-us-page {
     min-height: 100vh;
+    padding: 0;
 }
 
 /* Hero Section */
 .about-hero {
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     color: white;
-    padding: 80px 20px;
+    padding: 5rem 20px 4rem;
     text-align: center;
     margin-bottom: 60px;
 }
@@ -327,7 +328,7 @@
 /* Mobile: 480px - 767px */
 @media (max-width: 767px) {
     .about-hero {
-        padding: 60px 15px;
+        padding: 3.75rem 15px 3rem;
         margin-bottom: 40px;
     }
 
@@ -493,7 +494,7 @@
 /* Extra Small: 320px - 374px */
 @media (max-width: 374px) {
     .about-hero {
-        padding: 40px 10px;
+        padding: 3rem 10px 2.5rem;
     }
 
     .about-hero h1 {
