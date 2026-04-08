@@ -8,15 +8,15 @@ const productSuppliersData = [
     },
 
     {
-        "name": "Seimens",
-        "image": "../images/manufacturers/SEIMENS.png",
+        "name": "Siemens",
+        "image": "../images/manufacturers/siemens-industrial-logo.png",
         "description": "Siemens is a global technology leader in industrial automation and digitalization, offering comprehensive solutions for manufacturing, infrastructure, and energy sectors.",
         "country": "Germany",
         "website": "https://www.siemens.com/"
     },
     {
         "name": "L&T Electrical & Automation",
-        "image": "../images/manufacturers/LT_ELECTRICAL_AUTOMATION.png",
+        "image": "../images/manufacturers/l-and-t-electrical-automation-logo.png",
         "description": "L&T Electrical & Automation is a leading provider of electrical and automation solutions, offering a wide range of products for industrial and commercial applications.",
         "country": "India",
         "website": "https://www.lntinfotech.com/"

@@ -131,7 +131,7 @@ function renderProductsGrid(products, containerId) {
                 <div class="product-flip-card-front">
                     <span class="category-tag">${category}</span>
                     <div class="image-wrapper">
-                        <img src="${image}" alt="${name}" loading="lazy" onerror="this.src='images/placeholder_product.png'">
+                        <img src="${image}" alt="${name} product image for industrial enquiry" loading="lazy" onerror="this.src='images/placeholder_product.png'">
                     </div>
                     <div class="product-info-front">
                         <p class="product-supplier">${mfg}</p>

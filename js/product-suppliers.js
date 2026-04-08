@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         card.innerHTML = `
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="${imagePath}${image}" alt="${name} Logo" loading="lazy">
+                    <img src="${imagePath}${image}" alt="${name} industrial brand logo" loading="lazy">
                     <div class="flip-card-name">${name}</div>
                 </div>
                 <div class="flip-card-back">
