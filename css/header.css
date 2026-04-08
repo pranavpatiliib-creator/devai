@@ -39,11 +39,11 @@
 /* Desktop (1024px - 1439px) */
 @media (min-width: 1024px) {
     :root {
-        --header-height: 96px;
-        --header-clearance: 132px;
-        --header-padding-y: 1rem;
+        --header-height: 82px;
+        --header-clearance: 112px;
+        --header-padding-y: 0.5rem;
         --header-padding-x: 3rem;
-        --logo-size: 48px;
+        --logo-size: 78px;
         --gap-size: 1.25rem;
     }
 }
@@ -51,11 +51,11 @@
 /* Large Desktop (1440px+) */
 @media (min-width: 1440px) {
     :root {
-        --header-height: 104px;
-        --header-clearance: 140px;
-        --header-padding-y: 1.25rem;
+        --header-height: 88px;
+        --header-clearance: 118px;
+        --header-padding-y: 0.6rem;
         --header-padding-x: 4rem;
-        --logo-size: 52px;
+        --logo-size: 88px;
         --gap-size: 1.5rem;
     }
 }
@@ -143,6 +143,7 @@ main {
     /* Tighter connection between icon and text */
     text-decoration: none;
     animation: slideIn 0.8s 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    position: relative;
 }
 
 @keyframes slideIn {
@@ -174,14 +175,23 @@ main {
     width: var(--logo-size);
     object-fit: contain;
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    filter: drop-shadow(0 4px 8px rgba(255, 215, 0, 0.1));
+    filter: drop-shadow(0 6px 14px rgba(255, 215, 0, 0.16));
     flex-shrink: 0;
-
+    border-radius: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    animation: none;
 }
 
 .logo img:hover {
     transform: scale(1.08) rotateY(5deg);
-    filter: drop-shadow(0 8px 16px rgba(255, 215, 0, 0.3));
+    filter: drop-shadow(0 10px 18px rgba(255, 215, 0, 0.24));
+}
+
+.logo::before {
+    content: none;
 }
 
 
@@ -201,6 +211,11 @@ main {
     cursor: pointer;
     font-size: 1.5rem;
     color: white;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    appearance: none;
+    -webkit-appearance: none;
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
     width: 40px;
@@ -242,9 +257,8 @@ main {
 /* Desktop override for larger logo */
 @media (min-width: 769px) {
     .logo img {
-        height: 80px;
-        /* Your custom large size */
-        width: auto;
+        height: 104px;
+        width: 104px;
     }
 
     .brand-center {
@@ -311,8 +325,8 @@ main {
     }
 
     .logo img {
-        height: 45px;
-        width: 45px;
+        height: 62px;
+        width: 62px;
         flex-shrink: 0;
     }
 

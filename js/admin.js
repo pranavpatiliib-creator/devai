@@ -282,7 +282,7 @@ function updatePreview(product) {
                     <h3>${product.productName}</h3>
                     <div class="back-content">
                         <p class="full-desc">${product.fullDescription}</p>
-                        <a href="#" class="enquire-btn">Enquire Now</a>
+                        <a href="../categories/contact.html" class="enquire-btn">Enquire Now</a>
                     </div>
                 </div>
             </div>

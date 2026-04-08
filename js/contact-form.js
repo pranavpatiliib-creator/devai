@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const enquiryStorageKey = 'devaiSelectedProducts';
     const form = document.getElementById('contact-form');
     const status = document.getElementById('contact-form-status');
 
@@ -8,6 +9,82 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const submitButton = form.querySelector('button[type="submit"]');
     const appScriptUrl = form.dataset.appScriptUrl;
+    const messageField = form.querySelector('#message');
+    const urlParams = new URLSearchParams(window.location.search);
+    const requestedProduct = urlParams.get('product');
+    const requestedProducts = urlParams.get('products');
+    const requestedMessage = urlParams.get('message');
+    const selectedProductsPanel = document.getElementById('selected-products-panel');
+    const selectedProductsList = document.getElementById('selected-products-list');
+    const clearSelectedProductsButton = document.getElementById('clear-selected-products');
+
+    const getStoredProducts = () => {
+        try {
+            const raw = localStorage.getItem(enquiryStorageKey);
+            const parsed = raw ? JSON.parse(raw) : [];
+            return Array.isArray(parsed) ? parsed : [];
+        } catch (error) {
+            return [];
+        }
+    };
+
+    const saveStoredProducts = (products) => {
+        localStorage.setItem(enquiryStorageKey, JSON.stringify(products));
+    };
+
+    const getSelectedProducts = () => {
+        const productsFromUrl = requestedProducts
+            ? requestedProducts.split('|').map((item) => item.trim()).filter(Boolean)
+            : [];
+
+        const mergedProducts = [...new Set([
+            ...productsFromUrl,
+            ...(requestedProduct ? [requestedProduct] : []),
+            ...getStoredProducts()
+        ])];
+
+        saveStoredProducts(mergedProducts);
+        return mergedProducts;
+    };
+
+    const renderSelectedProducts = (products) => {
+        if (!selectedProductsPanel || !selectedProductsList) {
+            return;
+        }
+
+        if (!products.length) {
+            selectedProductsPanel.hidden = true;
+            selectedProductsList.innerHTML = '';
+            return;
+        }
+
+        selectedProductsPanel.hidden = false;
+        selectedProductsList.innerHTML = products.map((product) => `
+            <span class="selected-product-chip">${product}</span>
+        `).join('');
+    };
+
+    const selectedProducts = getSelectedProducts();
+    renderSelectedProducts(selectedProducts);
+
+    if (messageField) {
+        if (requestedMessage) {
+            messageField.value = requestedMessage;
+        } else if (selectedProducts.length > 1) {
+            messageField.value = `Hi, I am interested in these products: ${selectedProducts.join(', ')}. Please share more details and pricing.`;
+        } else if (requestedProduct) {
+            messageField.value = `Hi, I am interested in ${requestedProduct}. Please share more details and pricing.`;
+        } else if (selectedProducts.length === 1) {
+            messageField.value = `Hi, I am interested in ${selectedProducts[0]}. Please share more details and pricing.`;
+        }
+    }
+
+    if (clearSelectedProductsButton) {
+        clearSelectedProductsButton.addEventListener('click', () => {
+            localStorage.removeItem(enquiryStorageKey);
+            renderSelectedProducts([]);
+        });
+    }
 
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
@@ -44,6 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             form.reset();
+            localStorage.removeItem(enquiryStorageKey);
+            renderSelectedProducts([]);
             status.textContent = 'Message sent successfully. We will get back to you shortly.';
             status.className = 'form-status form-status-success';
         } catch (error) {
