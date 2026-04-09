@@ -7,6 +7,7 @@
         radial-gradient(circle at top right, rgba(245, 158, 11, 0.14), transparent 24%),
         linear-gradient(180deg, #f5f8fc 0%, #eef4fa 52%, #f7f9fc 100%);
     color: #102542;
+    padding-top: calc(var(--header-clearance) + 1rem);
 }
 
 body:has(.contact-page) {
@@ -536,6 +537,10 @@ body:has(.contact-page) {
 }
 
 @media (max-width: 768px) {
+    .contact-page {
+        padding-top: calc(var(--header-clearance) + 0.75rem);
+    }
+
     .contact-hero,
     .contact-quick-links,
     .contact-section {
